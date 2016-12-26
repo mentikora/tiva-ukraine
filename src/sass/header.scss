@@ -1,0 +1,114 @@
+#header{
+  
+  /* header top contacts */ 
+  .top{
+    background: $black;
+    
+    li,
+    span,
+    a{
+      text-transform: uppercase;
+      color: rgba(255,255,255, .7);
+      font: {
+        size: 14px;
+        weight: 700;
+      }
+    }
+    i{
+      color: $green;
+    }
+  }
+  
+  /* main navigation wrapper */ 
+  .bottom{
+    border-bottom: 1px solid #d2d2d2;
+  }
+
+  /* logo */
+  .logo{
+    float: left;
+  }
+  
+}
+
+/* 
+  Top header mobile menu 
+  ===============
+*/
+#header_top_menu_mobile{
+  margin: 0 15px;
+  
+  &.active{
+    border-top: 1px solid #000;
+  }
+
+}
+
+/* 
+  Main navigation 
+  ===============
+*/
+
+/* set link style*/
+.nav_link_style{
+  font-weight: 700;
+  color: $black;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @include transition(all .25s ease);
+
+  &:hover,
+  &:focus{
+    color: $green;
+  }
+}
+
+/* nav */
+#nav{
+  float: right;
+  
+  li { position: relative; }
+  > li{
+    float: left;
+    
+    > a,
+    > span{
+      font-size: 16px;
+
+      @extend .nav_link_style;
+    }
+  }
+  
+  /* forEach inner ul/a/span */
+  ul {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    a,
+    span{
+      border-left: 2px solid #fff;
+      font-size: 14px;
+
+      @extend .nav_link_style;
+
+      &:hover,
+      &:focus{
+        border-left-color: $green;
+      }
+    }
+
+    ul{
+      left: 100%;
+    }
+
+    li {
+      border-top: 1px solid #e5e5e5;
+      &:first-child{
+        border-top: 0;
+      }
+    }
+  }
+}

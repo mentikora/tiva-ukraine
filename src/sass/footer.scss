@@ -1,0 +1,53 @@
+#footer{
+  background: $black;
+  color: #fff;
+  
+  /* titles */ 
+  ul,
+  h3{
+    margin: 0;
+
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 16px;
+    font: {
+      size: 16px;
+      weight: 700;
+    }
+  }
+  ul{
+    a{ color: #fff; }
+  }
+  
+  /* footer contact button*/
+  .footer_contact_us_btn{
+    text-transform: uppercase;
+    color: #fff;
+    font:{
+      size: 16px;
+      weight: 900;
+    }
+  }
+
+
+  /* bottom */
+  .bottom{
+    border-top: 1px solid rgba(255,255,255, .7);
+    div{
+      padding: 0;
+    }
+  }
+
+  .copyrights,
+  .welldo{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+  }
+  .welldo{
+    text-align: right;
+    a{
+      color: $green;
+    }
+  }
+}
