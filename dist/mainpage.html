@@ -7,15 +7,89 @@
   
   <link rel="stylesheet" href="style.css">
   
+  <!-- mainpage js -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+  <!-- http://kenwheeler.github.io/slick/ -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.mainpage_banner_wrapper').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        appendDots: $('.banner_dots'),
+        // autoplay: true,
+        autoplaySpeed: 6000
+      });
+      $('.mainpage_slick_categories').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        // autoplay: true,
+        autoplaySpeed: 6000,
+        customPaging: '15px',
+        appendArrows: $('.category_slick_arrows'),
+        responsive: [
+          {
+            breakpoint: 1170,
+            settings: {
+              slidesToShow: 5
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script> 
+  
   <!-- add font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
 <body>
 
-<!-- welcome -->
+<!-- top banner -->
 <div class="welcome_slide">
-  <div class="slide">
-    welcome slider
+  <div class="relative">
+    <div class="banner_dots"></div>
+    <div class="mainpage_banner_wrapper">
+
+      <div class="mainpage_banner_block">
+        <!-- <img src="../src/img/test_img.jpg" alt="" class="img-responsive"> -->
+        <div class="content">
+          <h2 class="title">
+            сміливі <br>
+            рішення <br>
+            <span>
+              для вашого <br> 
+              комфорту!
+            </span>
+          </h2>
+          <div class="ck_editor">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          </div>
+        </div>      
+      </div>
+
+      <div class="mainpage_banner_block">
+        <!-- <img src="../src/img/test_img.jpg" alt="" class="img-responsive"> -->
+        <div class="content">2</div>      
+      </div>
+
+    </div>
   </div>
   <div class="welcome_text text-center">
     <h1 class="h1_style">Тіва Україна</h1>
@@ -27,13 +101,86 @@
 <section class="mainpage_block text-center">
   <h2 class="h2_style">категорії</h2>
   <div class="container">
-    <div class="col-md-8 col-sm-offset-2 ck_editor">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 ck_editor">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+      </div>
     </div>
   </div>
+
+  <!-- categories wrapper -->
   <div>
-    something missing here
+    <div class="category_slick_arrows"></div>
+    <div class="mainpage_categories_wrapper mainpage_slick_categories">
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 1</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 2</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 3</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 4</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 5</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mainpage_category_block">
+        <img src="http://placehold.it/300x300/241e9b" class="img-responsive">
+        <div class="bg_black">
+          <div class="bg_white">
+            <p>Котли 6</p>
+            <a href="javascript:void(0);" class="btn">
+              перейти
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
   <a href="javascript:void(0);" class="btn">переглянути усі</a>
 </section>
 
@@ -41,7 +188,7 @@
 <section class="mainpage_block text-center">
   <h2 class="h2_style">наші переваги</h2>
   <div class="container">
-    <div class="col-md-8 col-sm-offset-2 ck_editor">
+    <div class="col-md-8 col-md-offset-2 ck_editor">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
     </div>
   </div>
@@ -51,7 +198,7 @@
 <section class="mainpage_block text-center">
   <h2 class="h2_style">новини</h2>
   <div class="container">
-    <div class="col-md-8 col-sm-offset-2 ck_editor">
+    <div class="col-md-8 col-md-offset-2 ck_editor">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
     </div>
     <a href="javascript:void(0);" class="btn">переглянути усі</a>

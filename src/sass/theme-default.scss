@@ -12,6 +12,11 @@
 .clearfix { display: block; }
 
 *{ box-sizing: border-box; }
+.img-responsive{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
 
 /* def's */
 html,
@@ -23,6 +28,8 @@ body{
 .text-right{ text-align: right; } 
 .text-left{ text-align: left; }
 .text-center{ text-align: center; }
+
+.relative{ position: relative; }
 
 /* main blocks def's */
 body{ 
@@ -59,4 +66,8 @@ body{
   flex: 0 0 auto;
 } 
 
+/* slick */ 
+.slick-slide:focus{
+  outline: 0;
+}
 
