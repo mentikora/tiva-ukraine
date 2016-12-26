@@ -3,6 +3,7 @@
   /* header top contacts */ 
   .top{
     background: $black;
+    padding: 6px 0;
     
     li,
     span,
@@ -21,11 +22,13 @@
   
   /* main navigation wrapper */ 
   .bottom{
+    height: 70px;
     border-bottom: 1px solid #d2d2d2;
   }
 
   /* logo */
   .logo{
+    margin-top: 10px;
     float: left;
   }
   
@@ -37,6 +40,7 @@
 */
 #header_top_menu_mobile{
   margin: 0 15px;
+  display: none;
   
   &.active{
     border-top: 1px solid #000;
@@ -59,7 +63,7 @@
   @include transition(all .25s ease);
 
   &:hover,
-  &:focus{
+  &.active{
     color: $green;
   }
 }
@@ -67,10 +71,14 @@
 /* nav */
 #nav{
   float: right;
+  margin-top: 26px;
   
   li { position: relative; }
   > li{
     float: left;
+    margin: 0 20px;
+    &:first-child{ margin-left: 0; }
+    &:last-child{ margin-right: 0; }
     
     > a,
     > span{
@@ -78,10 +86,15 @@
 
       @extend .nav_link_style;
     }
+
+    > ul{
+      top: 45px;
+    }
   }
-  
+
   /* forEach inner ul/a/span */
   ul {
+    min-width: 160px;
     position: absolute;
     z-index: 2;
     top: 0;
@@ -89,7 +102,10 @@
 
     a,
     span{
-      border-left: 2px solid #fff;
+      display: block;
+      padding: 0 20px 0 15px;
+      border-left: 6px solid #fff;
+    
       font-size: 14px;
 
       @extend .nav_link_style;
@@ -101,13 +117,16 @@
     }
 
     ul{
-      left: 100%;
+      left: calc(100% + 1px);
     }
 
     li {
+      height: 39px;
+      line-height: 39px;
       border-top: 1px solid #e5e5e5;
       &:first-child{
         border-top: 0;
+        margin-top: -1px;
       }
     }
   }

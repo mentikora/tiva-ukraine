@@ -61,3 +61,36 @@
   content: "\e90b";
 }
 
+/* headers */
+.headers_title{
+  margin: 0;
+  text-transform: uppercase;
+  color: $green;
+}
+.h1_style{
+  @extend .headers_title;
+  
+  font: {
+    size: 55px;
+    weight: 900;
+  }
+}
+
+.h2_style{
+  @extend .headers_title;
+
+  font: {
+    size: 45px;
+    weight: 900;
+  }
+}
+
+/* ck_editor */
+.ck_editor{
+  color: $black;
+  line-height: 24px;
+  font: {
+    size: 16px;
+    weight: 700;
+  }
+}

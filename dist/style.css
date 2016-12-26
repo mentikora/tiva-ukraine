@@ -410,6 +410,9 @@ ol, ul {
 
 a {
   text-decoration: none; }
+
+p {
+  margin: 0; }
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -822,6 +825,9 @@ ol, ul {
 
 a {
   text-decoration: none; }
+
+p {
+  margin: 0; }
 
 /*
   Font
@@ -1510,9 +1516,13 @@ a {
   .col-lg-offset-0 {
     margin-left: 0%; } }
 
-.clearfix,
+.clearfix, .btn, #footer .bottom,
 .clearfix:before,
+.btn:before,
+#footer .bottom:before,
 .clearfix:after,
+.btn:after,
+#footer .bottom:after,
 .container:before,
 .container:after,
 .container-fluid:before,
@@ -1522,7 +1532,7 @@ a {
   content: " ";
   display: table; }
 
-.clearfix:after,
+.clearfix:after, .btn:after, #footer .bottom:after,
 .container:after,
 .container-fluid:after,
 .row:after {
@@ -1542,6 +1552,8 @@ a {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 @font-face {
@@ -1600,8 +1612,29 @@ a {
 .icon-vk:before {
   content: "\E90B"; }
 
+/* headers */
+.headers_title, .h1_style, .h2_style {
+  margin: 0;
+  text-transform: uppercase;
+  color: #8fc73e; }
+
+.h1_style {
+  font-size: 55px;
+  font-weight: 900; }
+
+.h2_style {
+  font-size: 45px;
+  font-weight: 900; }
+
+/* ck_editor */
+.ck_editor {
+  color: #323232;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 700; }
+
 /* clearfix */
-.clearfix:after {
+.clearfix:after, .btn:after, #footer .bottom:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -1609,13 +1642,13 @@ a {
   clear: both;
   height: 0; }
 
-.clearfix {
+.clearfix, .btn, #footer .bottom {
   display: inline-block; }
 
-* html .clearfix {
+* html .clearfix, * html .btn, * html #footer .bottom, #footer * html .bottom {
   height: 1%; }
 
-.clearfix {
+.clearfix, .btn, #footer .bottom {
   display: block; }
 
 * {
@@ -1630,13 +1663,21 @@ body {
 .text-right {
   text-align: right; }
 
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
 /* main blocks def's */
 body {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
@@ -1644,25 +1685,51 @@ body {
 
 #header {
   -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; }
 
 #wrapper {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
 
 #footer {
   -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; }
+
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #8fc73e;
+  border-left-width: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #323232;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+  .btn:hover, .btn:focus {
+    background: #8fc73e;
+    color: #fff; }
 
 #header {
   /* header top contacts */
   /* main navigation wrapper */
   /* logo */ }
   #header .top {
-    background: #323232; }
+    background: #323232;
+    padding: 6px 0; }
     #header .top li,
     #header .top span,
     #header .top a {
@@ -1673,8 +1740,10 @@ body {
     #header .top i {
       color: #8fc73e; }
   #header .bottom {
+    height: 70px;
     border-bottom: 1px solid #d2d2d2; }
   #header .logo {
+    margin-top: 10px;
     float: left; }
 
 /* 
@@ -1682,7 +1751,8 @@ body {
   ===============
 */
 #header_top_menu_mobile {
-  margin: 0 15px; }
+  margin: 0 15px;
+  display: none; }
   #header_top_menu_mobile.active {
     border-top: 1px solid #000; }
 
@@ -1699,50 +1769,70 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
   .nav_link_style:hover, #nav > li > a:hover,
   #nav > li > span:hover, #nav ul a:hover,
-  #nav ul span:hover, .nav_link_style:focus, #nav > li > a:focus,
-  #nav > li > span:focus, #nav ul a:focus,
-  #nav ul span:focus {
+  #nav ul span:hover, .nav_link_style.active, #nav > li > a.active,
+  #nav > li > span.active, #nav ul a.active,
+  #nav ul span.active {
     color: #8fc73e; }
 
 /* nav */
 #nav {
   float: right;
+  margin-top: 26px;
   /* forEach inner ul/a/span */ }
   #nav li {
     position: relative; }
   #nav > li {
-    float: left; }
+    float: left;
+    margin: 0 20px; }
+    #nav > li:first-child {
+      margin-left: 0; }
+    #nav > li:last-child {
+      margin-right: 0; }
     #nav > li > a,
     #nav > li > span {
       font-size: 16px; }
+    #nav > li > ul {
+      top: 45px; }
   #nav ul {
+    min-width: 160px;
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0; }
     #nav ul a,
     #nav ul span {
-      border-left: 2px solid #fff;
+      display: block;
+      padding: 0 20px 0 15px;
+      border-left: 6px solid #fff;
       font-size: 14px; }
       #nav ul a:hover, #nav ul a:focus,
       #nav ul span:hover,
       #nav ul span:focus {
         border-left-color: #8fc73e; }
     #nav ul ul {
-      left: 100%; }
+      left: calc(100% + 1px); }
     #nav ul li {
+      height: 39px;
+      line-height: 39px;
       border-top: 1px solid #e5e5e5; }
       #nav ul li:first-child {
-        border-top: 0; }
+        border-top: 0;
+        margin-top: -1px; }
 
 #footer {
   background: #323232;
   color: #fff;
   /* titles */
-  /* footer contact button*/
+  /* ck_editor */
+  /* btn */
+  /* top */
+  /* socials */
   /* bottom */ }
   #footer ul,
   #footer h3 {
@@ -1754,12 +1844,49 @@ body {
     font-weight: 700; }
   #footer ul a {
     color: #fff; }
-  #footer .footer_contact_us_btn {
-    text-transform: uppercase;
+  #footer ul li {
+    margin-bottom: 37px; }
+    #footer ul li:last-child {
+      margin-bottom: 0; }
+  #footer h3 {
+    margin-bottom: 15px; }
+  #footer .ck_editor {
+    margin-bottom: 25px;
     color: #fff;
-    font-size: 16px;
-    font-weight: 900; }
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: normal; }
+  #footer .divider {
+    width: 66px;
+    height: 1px;
+    background: #8fc73e;
+    margin: 15px 0; }
+  #footer .btn {
+    margin-top: 30px;
+    margin-bottom: 70px;
+    color: #fff; }
+  #footer .top {
+    padding: 55px 0 70px; }
+  #footer .socials a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #898989;
+    text-align: center;
+    color: #898989;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    #footer .socials a:hover, #footer .socials a:focus {
+      border-color: #8fc73e;
+      background: #8fc73e;
+      color: #323232; }
   #footer .bottom {
+    padding: 18px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.7); }
     #footer .bottom div {
       padding: 0; }
@@ -1767,8 +1894,35 @@ body {
   #footer .welldo {
     text-transform: uppercase;
     color: #fff;
-    font-size: 12px; }
+    font-size: 12px;
+    line-height: 33px; }
   #footer .welldo {
     text-align: right; }
     #footer .welldo a {
       color: #8fc73e; }
+      #footer .welldo a:hover {
+        text-decoration: underline; }
+    #footer .welldo img {
+      display: inline-block;
+      position: relative;
+      float: right;
+      margin-left: 15px; }
+
+.welcome_text {
+  height: 230px;
+  background: #323232;
+  padding-top: 70px; }
+  .welcome_text p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff; }
+
+.mainpage_block {
+  padding: 100px 0; }
+  .mainpage_block .h2_style {
+    margin-bottom: 25px; }
+  .mainpage_block .btn {
+    margin-top: 50px; }
+  .mainpage_block .ck_editor {
+    margin-bottom: 40px; }

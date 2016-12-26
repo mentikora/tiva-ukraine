@@ -1,0 +1,26 @@
+.btn{
+  display: inline-block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid $green;
+  border-left-width: 6px;
+  
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  font: {
+    size: 16px;
+    weight: 700;
+  } 
+
+  @include transition(all .25s ease);
+  @extend .clearfix;
+
+  &:hover,
+  &:focus{
+    background: $green;
+    color: #fff;
+  }
+}
