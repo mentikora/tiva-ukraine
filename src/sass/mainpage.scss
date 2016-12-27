@@ -261,3 +261,69 @@ section.more{
     }
   }
 }
+
+/* mainpage advantages */ 
+.mainpage_advantages{
+  background: #fbfbfb;
+  img{
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 4px;
+    border: {
+      width: 1px;
+      style: solid;
+      color: #000000;
+      radius: 50%;
+    }
+    background: transparent;
+  }
+  .title{
+    text-transform: uppercase;
+    font-size: 18px;
+
+    color: $darkgrey;
+  }
+}
+
+/* mainpage news */
+.mainpage_news{} 
+.news_block{
+  text-align: left;
+  border: 1px solid $darkgrey;
+
+  .fake{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 2;
+    width: calc(100% - 30px);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0, .6);
+    .btn{
+      margin-top: 0;
+      color: #fff;
+    }
+  }
+
+  .date{
+    font-size: 12px;
+    color: $darkgrey;
+  }
+  .title{
+    font:{
+      size: 18px;
+      weight: 900;
+    }
+    color: $green;
+  }
+  .ck_editor{
+    font-size: 14px;
+    color: $darkgrey;
+  }
+}
