@@ -1,7 +1,19 @@
 .about_page{
-  padding-bottom: 100px;
+  @extend ._page;
+
+  @media(max-width: $grid_mobile){
+    .h2_style,
+    .h3_style{
+      text-align: center;
+    }
+    .h3_style{
+      margin-top: 45px;
+    }
+  }
+
   .h2_style{
     color: $black;
+    margin-bottom: 25px;
   }
 
   .flex_grid{
@@ -12,6 +24,26 @@
       &.text{
         justify-content: center;
         align-items: center;
+
+        font-size: 14px;
+        line-height: 24px;
+        color: $darkgrey;
+        text-transform: uppercase;
+      }
+    }
+
+    @media(max-width: $grid_mobile){
+      flex-direction: column;
+      margin-top: 30px;
+
+      .text{
+        padding-top: 20px;
+      }
+      .order_mobile_1{
+        order: 1;
+      }
+      .order_mobile_2{
+        order: 2;
       }
     }
   }

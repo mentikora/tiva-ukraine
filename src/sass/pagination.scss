@@ -1,0 +1,46 @@
+.pagination{
+	margin-top: 50px;
+
+	@extend .clearfix;
+
+	.prev{
+		float: left;
+	}
+	.next{
+		float: right;
+	}	
+	ul{
+		margin: 0 auto;
+		text-align: center;
+		
+		li{
+			display: inline-block;	
+			vertical-align: middle;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 8px;
+
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+
+			&.active *{
+				font-size: 30px;
+				color: $green;
+			}
+		}
+
+		a,
+		span{
+			font:{
+				size: 14px;
+				weight: 900;
+			}
+			line-height: 30px;
+			color: #7f7f7f;
+		}
+	}
+}

@@ -71,3 +71,11 @@ body{
   outline: 0;
 }
 
+/* page */ 
+._page{
+  padding-bottom: 100px;
+  @media(max-width: $grid_mobile){
+    padding-bottom: 50px;
+  }
+}
+
