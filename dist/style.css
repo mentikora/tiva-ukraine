@@ -1380,10 +1380,12 @@ body {
   outline: 0; }
 
 /* page */
-._page, .about_page, .product_page {
+._page, .about_page, .products_page,
+.categories_page {
   padding-bottom: 100px; }
   @media (max-width: 767px) {
-    ._page, .about_page, .product_page {
+    ._page, .about_page, .products_page,
+    .categories_page {
       padding-bottom: 50px; } }
 
 .breadcrumbs {
@@ -1979,5 +1981,6 @@ section.more .content {
       .about_page .flex_grid .order_mobile_2 {
         order: 2; } }
 
-.product_page h1.h2_style {
+.products_page h1.h2_style,
+.categories_page h1.h2_style {
   color: #323232; }

@@ -1,0 +1,12 @@
+.products_page,
+.categories_page{
+	@extend ._page;
+	
+	h1.h2_style{
+		color: $black;
+	}
+}
+
+.products_page{}
+
+.categories_page{}
