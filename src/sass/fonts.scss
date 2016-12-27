@@ -119,6 +119,18 @@
   }
 }
 
+.h3_style{
+  @extend .headers_title;
+
+  font: {
+    size: 30px;
+    width: 900;
+  }
+  @media(max-width: $grid_tablet){
+    font-size: 24px;
+  }
+}
+
 /* ck_editor */
 .ck_editor{
   color: $black;
@@ -130,5 +142,14 @@
 
   @media(max-width: $grid_tablet){
     font-size: 13px;
+  }
+
+  &.bold{
+    font-weight: 700;
+  }
+
+  &.small{
+    font-size: 14px;
+    font-weight: normal;
   }
 }

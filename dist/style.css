@@ -1251,7 +1251,7 @@ p {
   content: "\E913"; }
 
 /* headers */
-.headers_title, .h1_style, .h2_style {
+.headers_title, .h1_style, .h2_style, .h3_style {
   margin: 0;
   text-transform: uppercase;
   color: #8fc73e; }
@@ -1270,6 +1270,13 @@ p {
     .h2_style {
       font-size: 30px; } }
 
+.h3_style {
+  font-size: 30px;
+  font-width: 900; }
+  @media (max-width: 991px) {
+    .h3_style {
+      font-size: 24px; } }
+
 /* ck_editor */
 .ck_editor {
   color: #323232;
@@ -1279,6 +1286,11 @@ p {
   @media (max-width: 991px) {
     .ck_editor {
       font-size: 13px; } }
+  .ck_editor.bold {
+    font-weight: 700; }
+  .ck_editor.small {
+    font-size: 14px;
+    font-weight: normal; }
 
 /* clearfix */
 .clearfix:after, .btn:after, #footer .bottom:after, .category_slick_arrows:after {
@@ -1354,6 +1366,33 @@ body {
 /* slick */
 .slick-slide:focus {
   outline: 0; }
+
+.breadcrumbs {
+  float: left;
+  width: 100%; }
+  .breadcrumbs li,
+  .breadcrumbs span,
+  .breadcrumbs a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #898989;
+    text-transform: uppercase; }
+  .breadcrumbs li {
+    float: left;
+    position: relative;
+    margin-right: 30px; }
+    .breadcrumbs li:after {
+      content: ">>";
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      color: #898989;
+      font-size: 10px; }
+    .breadcrumbs li:first-child {
+      color: #323232; }
+    .breadcrumbs li:last-child:after {
+      display: none; }
 
 .btn {
   display: inline-block;
@@ -1606,7 +1645,7 @@ body {
   /* img fix ?*/
   height: 600px !important;
   /* webpack issue.. */
-  background: #000 50% no-repeat;
+  background: #fff 50% no-repeat;
   background-size: cover; }
   .mainpage_banner_block .content {
     padding: 115px 0 0 145px;
@@ -1820,3 +1859,24 @@ section.more .content {
   .news_block .ck_editor {
     font-size: 14px;
     color: #898989; }
+
+.about_page {
+  padding-bottom: 100px; }
+  .about_page .h2_style {
+    color: #323232; }
+  .about_page .flex_grid {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .about_page .flex_grid > div {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      .about_page .flex_grid > div.text {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }

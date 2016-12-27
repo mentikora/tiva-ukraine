@@ -1,0 +1,41 @@
+.breadcrumbs{
+  float: left;
+  width: 100%;
+
+  li,
+  span,
+  a{
+    font:{
+      size: 14px;
+      weight: 700;
+    }
+    color: $darkgrey;
+    text-transform: uppercase;
+  }
+  li{
+    float: left;
+    position: relative;
+    margin-right: 30px;
+
+    &:after{
+      content: ">>";
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      color: $darkgrey;
+      font-size: 10px;
+    }
+
+    &:first-child{
+      color: #323232;
+    }
+
+    &:last-child:after{
+      display: none;
+    }
+  }
+  span{}
+  a{}
+  .active{}
+}
