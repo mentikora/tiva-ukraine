@@ -13,6 +13,10 @@ module.exports = {
           fallbackLoader: 'style',
           loader: 'css!postcss!sass'
         })
+      },
+      {
+        test: /(\.png|\.jpg)$/,
+        loader: 'url?limit=8000&name=../img/[name].[ext]'
       }
     ]
   },

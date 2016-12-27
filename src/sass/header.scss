@@ -96,15 +96,16 @@
   ul {
     min-width: 160px;
     position: absolute;
-    z-index: 2;
+    z-index: 999;
     top: 0;
     left: 0;
+    background: #fff;
 
     a,
     span{
       display: block;
       padding: 0 20px 0 15px;
-      border-left: 6px solid #fff;
+      border-left: 6px solid transparent;
     
       font-size: 14px;
 
@@ -123,10 +124,9 @@
     li {
       height: 39px;
       line-height: 39px;
-      border-top: 1px solid #e5e5e5;
-      &:first-child{
-        border-top: 0;
-        margin-top: -1px;
+      border-bottom: 1px solid #e5e5e5;
+      &:last-child{        
+         border-bottom: 0;
       }
     }
   }
