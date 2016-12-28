@@ -78,6 +78,10 @@ body{
   h1{
     color: $black;
     margin-bottom: 50px;
+
+    @media(max-width: $grid_mobile){
+      margin: 15px 0;
+    }
   }
 
   @media(max-width: $grid_mobile){

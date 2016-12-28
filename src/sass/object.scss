@@ -12,5 +12,13 @@
 
 	.vertical_block{
 		margin-top: 50px;
+		
+		@media(max-width: $grid_mobile){
+			margin-top: 25px;
+		}
+
+		img{
+			margin: 25px 0;
+		}
 	}
 }

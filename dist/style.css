@@ -1388,6 +1388,10 @@ body {
   .categories_page h1, .page_producers h1, .object_page h1 {
     color: #323232;
     margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      ._page h1, .about_page h1, .products_page h1,
+      .categories_page h1, .page_producers h1, .object_page h1 {
+        margin: 15px 0; } }
   @media (max-width: 767px) {
     ._page, .about_page, .products_page,
     .categories_page, .page_producers, .object_page {
@@ -2075,3 +2079,8 @@ section.more .content {
 
 .object_page .vertical_block {
   margin-top: 50px; }
+  @media (max-width: 767px) {
+    .object_page .vertical_block {
+      margin-top: 25px; } }
+  .object_page .vertical_block img {
+    margin: 25px 0; }
