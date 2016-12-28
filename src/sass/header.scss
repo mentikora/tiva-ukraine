@@ -112,7 +112,8 @@
       @extend .nav_link_style;
 
       &:hover,
-      &:focus{
+      &:focus,
+      &.active{
         border-left-color: $green;
       }
     }
@@ -126,7 +127,7 @@
       line-height: 39px;
       border-bottom: 1px solid #e5e5e5;
       &:last-child{        
-         border-bottom: 0;
+        border-bottom: 0;
       }
     }
   }
