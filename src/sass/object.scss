@@ -1,0 +1,16 @@
+.object_page{
+	@extend ._page;
+
+	.object_title{
+		margin-bottom: 20px;
+		font:{
+			size: 18px;
+			weight: 900;
+		}
+		color: #323232;
+	}
+
+	.vertical_block{
+		margin-top: 50px;
+	}
+}

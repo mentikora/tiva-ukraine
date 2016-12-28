@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1381,15 +1382,15 @@ body {
 
 /* page */
 ._page, .about_page, .products_page,
-.categories_page, .page_producers {
+.categories_page, .page_producers, .object_page {
   padding-bottom: 100px; }
-  ._page h1.h2_style, .about_page h1.h2_style, .products_page h1.h2_style,
-  .categories_page h1.h2_style, .page_producers h1.h2_style {
+  ._page h1, .about_page h1, .products_page h1,
+  .categories_page h1, .page_producers h1, .object_page h1 {
     color: #323232;
     margin-bottom: 50px; }
   @media (max-width: 767px) {
     ._page, .about_page, .products_page,
-    .categories_page, .page_producers {
+    .categories_page, .page_producers, .object_page {
       padding-bottom: 50px; } }
 
 .breadcrumbs {
@@ -1413,7 +1414,7 @@ body {
     position: relative;
     margin-right: 30px; }
     .breadcrumbs li:after {
-      content: ">>";
+      content: "\BB";
       display: block;
       position: absolute;
       top: 3px;
@@ -2065,3 +2066,12 @@ section.more .content {
     font-weight: normal;
     font-size: 14px;
     color: #898989; }
+
+.object_page .object_title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #323232; }
+
+.object_page .vertical_block {
+  margin-top: 50px; }
