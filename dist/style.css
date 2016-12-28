@@ -1318,7 +1318,7 @@ p {
 * {
   box-sizing: border-box; }
 
-.img-responsive {
+.img-responsive, .producers_item .img_wrap img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -1374,11 +1374,14 @@ body {
 
 /* page */
 ._page, .about_page, .products_page,
-.categories_page {
+.categories_page, .page_producers {
   padding-bottom: 100px; }
+  ._page h1.h2_style, .about_page h1.h2_style, .products_page h1.h2_style,
+  .categories_page h1.h2_style, .page_producers h1.h2_style {
+    color: #323232; }
   @media (max-width: 767px) {
     ._page, .about_page, .products_page,
-    .categories_page {
+    .categories_page, .page_producers {
       padding-bottom: 50px; } }
 
 .breadcrumbs {
@@ -2008,10 +2011,6 @@ section.more .content {
             -ms-flex-order: 2;
                 order: 2; } }
 
-.products_page h1.h2_style,
-.categories_page h1.h2_style {
-  color: #323232; }
-
 .filter ul {
   box-shadow: 0 0 6px 0 #d2d2d2;
   margin-top: 30px; }
@@ -2030,7 +2029,12 @@ section.more .content {
     padding: 0 20px 0 15px;
     border-left: 6px solid transparent;
     font-size: 14px; }
-  .filter li.active a,
+  .filter li.active a {
+    border-left-color: #8fc73e;
+    background: #8fc73e;
+    color: #fff; }
+    .filter li.active a:hover {
+      color: #fff; }
   .filter li:hover a {
     border-left-color: #8fc73e;
     color: #8fc73e; }
@@ -2038,3 +2042,51 @@ section.more .content {
 .filter .btn {
   margin-top: 30px;
   width: 100%; }
+
+.category_empty {
+  text-align: center; }
+  .category_empty p {
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #898989; }
+
+.producers_item .img_wrap {
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .producers_item .img_wrap img {
+    margin: 0 auto; }
+
+.producers_item .divider {
+  margin: 40px 0 30px;
+  height: 1px;
+  background: #898989; }
+
+.producers_item .title {
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 18px;
+  color: #323232;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease; }
+  .producers_item .title:hover {
+    color: #8fc73e; }
+
+.producers_item .ck_editor {
+  font-weight: normal;
+  font-size: 14px;
+  color: #898989; }

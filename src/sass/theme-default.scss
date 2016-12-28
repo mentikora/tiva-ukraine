@@ -74,6 +74,11 @@ body{
 /* page */ 
 ._page{
   padding-bottom: 100px;
+
+  h1.h2_style{
+    color: $black;
+  }
+
   @media(max-width: $grid_mobile){
     padding-bottom: 50px;
   }

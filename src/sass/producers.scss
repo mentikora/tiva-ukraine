@@ -1,0 +1,51 @@
+.page_producers{
+	@extend ._page;
+}
+
+.producers_wrapper{
+
+}
+
+.producers_item{
+	.img_wrap{
+		height: 110px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img{
+			margin: 0 auto;
+			@extend .img-responsive;
+		}	
+	}
+	
+	.divider{
+		margin: 40px 0 30px;
+
+		height: 1px;
+		background: $darkgrey;
+	}
+	.title{
+		display: inline-block;
+		margin-bottom: 25px;
+
+		font: {
+			size: 18px;
+			weight: 900;
+		}
+		line-height: 18px;
+		color: #323232;
+
+		@include transition(color .25s ease);
+
+		&:hover{
+			color: $green;
+		}
+	}
+	.ck_editor{
+		font-weight: normal;
+		font-size: 14px;
+		color: #898989;
+	}
+
+}
