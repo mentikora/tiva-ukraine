@@ -2252,3 +2252,23 @@ section.more .content {
     @media (max-width: 991px) {
       .feedback .btn {
         margin-top: 0px; } }
+
+.product_page h1 {
+  color: #323232;
+  margin: 30px 0 20px; }
+
+ul.circle {
+  margin-bottom: 25px; }
+  ul.circle li {
+    padding-left: 30px;
+    position: relative;
+    margin-top: 25px; }
+    ul.circle li:before {
+      content: "";
+      background: #8fc73e;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 7px; }
