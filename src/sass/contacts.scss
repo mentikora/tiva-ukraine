@@ -1,3 +1,138 @@
 .contacts_page{
 	@extend ._page;
+
+	.info{
+		text-align: center;
+		text-transform: uppercase;
+		.ck_editor{
+			color: $darkgrey;
+		}
+	}
 }
+
+/* 
+	Departments
+	===========
+*/ 
+.departments{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #fbfbfb;
+
+	@media(max-width: $grid_mobile){
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	h2{
+		color: $black;
+	}
+
+	.item{
+		margin-top: 40px;
+
+		@media(max-width: $grid_mobile){
+			margin-top: 30px;
+		}
+	}
+	.title{
+		margin-bottom: 25px;
+		line-height: 24px;
+
+		font:{
+			size: 18px;
+			weight: 900;
+		}
+		color: $black;
+		text-transform: uppercase;
+
+		@media(max-width: $grid_mobile){
+			font-size: 12px;
+		}
+		
+		span{
+			padding-right: 5px;
+			color: $green;
+		}
+	}
+	.location,
+	.telephone{
+		font-size: 14px;
+		line-height: 24px;
+		color: $darkgrey;
+
+		@media(max-width: $grid_mobile){
+			font-size: 12px;
+		}
+	}
+
+	.location{}
+	.telephone{}
+}
+
+/* 
+	Feedback 
+	========
+*/ 
+.feedback{
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@media(max-width: $grid_mobile){
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	h2{
+		color: $black;
+	}
+
+	.text{
+		margin: 25px 0 35px;
+		font:{
+			size: 16px;
+			weight: 700;
+		}
+		color: #464646;
+	}
+
+	label{
+		display: block;
+		margin-bottom: 8px;
+		font-size: 14px;
+		line-height: 14px;
+		color: $darkgrey;
+	}
+	.form_controller{
+		margin-bottom: 35px;
+		border: 1px solid #dfdfdf;
+		width: 100%;
+		font-size: 14px;
+		color: $black;
+		padding-left: 10px;
+
+		&:hover,
+		&:focus{
+			outline: 0;
+		}
+	}
+	input.form_controller{
+		height: 42px;
+		line-height: 42px;
+	}
+	textarea.form_controller{
+		min-height: 135px;
+		padding-top: 10px;
+	}
+
+	.btn{
+		margin-top: 15px;
+		background: #fff;
+		&:hover{
+			background: $green;
+		}
+		@media(max-width: $grid_tablet){
+			margin-top: 0px;
+		}
+	}
+}
+
