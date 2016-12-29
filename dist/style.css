@@ -1377,19 +1377,19 @@ body {
 
 /* page */
 ._page, .about_page, .products_page,
-.categories_page, .page_producers, .object_page, .news_page, .news_item_page {
+.categories_page, .page_producers, .object_page, .news_page, .news_item_page, .contacts_page {
   padding-bottom: 100px; }
   ._page h1, .about_page h1, .products_page h1,
-  .categories_page h1, .page_producers h1, .object_page h1, .news_page h1, .news_item_page h1 {
+  .categories_page h1, .page_producers h1, .object_page h1, .news_page h1, .news_item_page h1, .contacts_page h1 {
     color: #323232;
     margin-bottom: 50px; }
     @media (max-width: 767px) {
       ._page h1, .about_page h1, .products_page h1,
-      .categories_page h1, .page_producers h1, .object_page h1, .news_page h1, .news_item_page h1 {
+      .categories_page h1, .page_producers h1, .object_page h1, .news_page h1, .news_item_page h1, .contacts_page h1 {
         margin: 15px 0; } }
   @media (max-width: 767px) {
     ._page, .about_page, .products_page,
-    .categories_page, .page_producers, .object_page, .news_page, .news_item_page {
+    .categories_page, .page_producers, .object_page, .news_page, .news_item_page, .contacts_page {
       padding-bottom: 50px; } }
 
 .breadcrumbs {
