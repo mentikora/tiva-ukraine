@@ -59,31 +59,6 @@
     padding: 55px 0 70px;
   }
 
-  /* socials */
-  .socials{
-    a{
-      display: inline-block;
-      margin-right: 15px;
-      width: 33px;
-      height: 33px;
-      line-height: 33px;
-      border: 1px solid $darkgrey;
-
-      text-align: center;
-      color: $darkgrey;
-
-      @include transition(all .25s ease);
-
-      &:hover,
-      &:focus{
-        border-color: $green;
-        background: $green;
-        color: $black;
-      }
-    }
-  }
-
-
   /* bottom */
   .bottom{
     padding: 18px 0;
@@ -116,6 +91,30 @@
       float: right;
       margin-left: 15px;
       // top: -5px;
+    }
+  }
+}
+
+/* socials */
+.socials{
+  a{
+    display: inline-block;
+    margin-right: 15px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid $darkgrey;
+
+    text-align: center;
+    color: $darkgrey;
+
+    @include transition(all .25s ease);
+
+    &:hover,
+    &:focus{
+      border-color: $green;
+      background: $green;
+      color: $black;
     }
   }
 }
