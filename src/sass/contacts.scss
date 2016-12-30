@@ -19,6 +19,8 @@
 	padding-bottom: 100px;
 	background: #fbfbfb;
 
+
+
 	@media(max-width: $grid_mobile){
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -136,3 +138,17 @@
 	}
 }
 
+/*
+	google MAP
+	==========
+*/
+#map,
+.map{
+	height: 500px;
+	background: #000;
+	@extend .clearfix;
+
+	@media(max-width: $grid_tablet){
+		height: 300px;
+	}
+}
