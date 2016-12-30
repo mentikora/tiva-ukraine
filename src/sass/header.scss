@@ -207,6 +207,13 @@
       &:last-child{        
         border-bottom: 0;
       }
+      
+      &:first-child{
+        @media(max-width: $grid_tablet){
+          border-top: 1px solid #e5e5e5;
+        }  
+      }
+      
     }
   }
 

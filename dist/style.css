@@ -1580,6 +1580,9 @@ body {
       border-bottom: 1px solid #e5e5e5; }
       #nav ul li:last-child {
         border-bottom: 0; }
+      @media (max-width: 991px) {
+        #nav ul li:first-child {
+          border-top: 1px solid #e5e5e5; } }
   #nav li {
     position: relative; }
     @media (max-width: 991px) {
