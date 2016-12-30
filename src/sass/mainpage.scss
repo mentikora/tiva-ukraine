@@ -36,6 +36,10 @@
   .slick-active button{
     font-size: 30px;
     color: $green;
+
+    @media(max-width: $grid_tablet){
+      font-size: 20px;
+    }
   }
   button{
     padding: 0;
@@ -49,10 +53,33 @@
 
     font: {
       size: 14px;
-      font-weight: 900;
+      weight: 900;
+    }
+
+    @media(max-width: $grid_tablet){
+      font-size: 12px;
+    }
+  }
+
+  @media(max-width: $grid_tablet){
+    top: auto;
+    bottom: 30px;
+    left: 0;
+    right: auto;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+
+    li{
+      display: inline-block;
+      margin: 0 4px;
+      height: 20px;
+      line-height: 20px;
+      vertical-align: middle;
     }
   }
 }
+
 .mainpage_banner_block{
   position: relative;
   /* img fix ?*/ 
@@ -60,13 +87,13 @@
   height: 600px !important;
   
   /* webpack issue.. */
-  background: #fff 50% no-repeat;
+  background: $black 50% no-repeat;
   background-size: cover;
 
   // min-height: 600px !important;
 
   .content{
-    padding: 115px 0 0 145px;
+    padding-top: 145px;
     position: absolute;
     top: 0;
     right: 0;
@@ -76,7 +103,20 @@
     height: 100%;
     color: #fff;
     line-height: 1.15;
-    
+
+    .btn{
+      margin-top: 50px;
+      color: #fff;
+
+      @media(max-width: $grid_mobile){
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+
+    &.in_slider{
+      padding-left: 115px;
+    }
     
     h2{
       margin: 0 0 35px;
@@ -97,14 +137,25 @@
     }
 
     @media(max-width: $grid_tablet){
-      padding: 55px 15px 0 80px;
+      padding: 75px 15px 0 70px;
       h2{
         font-size: 35px;
       }
     }
+
+    @media(max-width: $grid_mobile){
+      top: 15px !important;
+      right: 15px !important;
+      bottom: 15px !important;
+      left: 15px !important;
+      padding: 50px 15px !important;
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+    }
+    
   }
   @media(max-width: $grid_tablet){
-    height: 390px !important;
+    height: 400px !important;
   }
 }
 

@@ -1720,6 +1720,9 @@ body {
   .banner_dots .slick-active button {
     font-size: 30px;
     color: #8fc73e; }
+    @media (max-width: 991px) {
+      .banner_dots .slick-active button {
+        font-size: 20px; } }
   .banner_dots button {
     padding: 0;
     border: 0;
@@ -1729,17 +1732,35 @@ body {
     color: #fffffe;
     cursor: pointer;
     font-size: 14px;
-    font-font-weight: 900; }
+    font-weight: 900; }
+    @media (max-width: 991px) {
+      .banner_dots button {
+        font-size: 12px; } }
+  @media (max-width: 991px) {
+    .banner_dots {
+      top: auto;
+      bottom: 30px;
+      left: 0;
+      right: auto;
+      width: 100%;
+      flex-direction: row;
+      height: auto; }
+      .banner_dots li {
+        display: inline-block;
+        margin: 0 4px;
+        height: 20px;
+        line-height: 20px;
+        vertical-align: middle; } }
 
 .mainpage_banner_block {
   position: relative;
   /* img fix ?*/
   height: 600px !important;
   /* webpack issue.. */
-  background: #fff 50% no-repeat;
+  background: #323232 50% no-repeat;
   background-size: cover; }
   .mainpage_banner_block .content {
-    padding: 115px 0 0 145px;
+    padding-top: 145px;
     position: absolute;
     top: 0;
     right: 0;
@@ -1749,6 +1770,15 @@ body {
     height: 100%;
     color: #fff;
     line-height: 1.15; }
+    .mainpage_banner_block .content .btn {
+      margin-top: 50px;
+      color: #fff; }
+      @media (max-width: 767px) {
+        .mainpage_banner_block .content .btn {
+          margin-top: 25px;
+          width: 100%; } }
+    .mainpage_banner_block .content.in_slider {
+      padding-left: 115px; }
     .mainpage_banner_block .content h2 {
       margin: 0 0 35px;
       text-transform: uppercase;
@@ -1762,12 +1792,21 @@ body {
       color: #fff; }
     @media (max-width: 991px) {
       .mainpage_banner_block .content {
-        padding: 55px 15px 0 80px; }
+        padding: 75px 15px 0 70px; }
         .mainpage_banner_block .content h2 {
           font-size: 35px; } }
+    @media (max-width: 767px) {
+      .mainpage_banner_block .content {
+        top: 15px !important;
+        right: 15px !important;
+        bottom: 15px !important;
+        left: 15px !important;
+        padding: 50px 15px !important;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px); } }
   @media (max-width: 991px) {
     .mainpage_banner_block {
-      height: 390px !important; } }
+      height: 400px !important; } }
 
 .welcome_text {
   height: 230px;
