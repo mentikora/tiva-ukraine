@@ -3,8 +3,7 @@
   /* header top contacts */ 
   .top{
     background: $black;
-    padding: 6px 0;
-    
+
     li,
     span,
     a{
@@ -14,10 +13,39 @@
         size: 14px;
         weight: 700;
       }
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+
+      @media(max-width: $grid_tablet){
+        font-size: 12px;
+      }
     }
     i{
+      margin-right: 10px;
       color: $green;
+      font-size: 26px;
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      height: 20px;
+      float: left;
+
+      @media(max-width: $grid_tablet){
+        top: 3px;
+      }
+
+      &.icon-arrow-down{
+        // cursor: pointer;
+        font-size: 40px;
+        top: -3px;
+        margin-right: 0;
+      }
     }
+  }
+
+  #header_top_mobile_button{
+    cursor: pointer;
   }
   
   /* main navigation wrapper */ 
@@ -31,6 +59,8 @@
     margin-top: 10px;
     float: left;
   }
+
+
   
 }
 
@@ -39,9 +69,11 @@
   ===============
 */
 #header_top_menu_mobile{
-  margin: 0 15px;
-  display: none;
-  
+  // margin: 0 15px;
+  // display: none;
+  li{
+    width: 100%;
+  }
   &.active{
     border-top: 1px solid #000;
   }
@@ -72,11 +104,17 @@
 #nav{
   float: right;
   margin-top: 26px;
+
+  @media(max-width: $grid_tablet){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   
-  li { position: relative; }
+  
   > li{
     float: left;
     margin: 0 20px;
+
     &:first-child{ margin-left: 0; }
     &:last-child{ margin-right: 0; }
     
@@ -85,10 +123,38 @@
       font-size: 16px;
 
       @extend .nav_link_style;
+
+      @media(max-width: $grid_tablet){
+        display: block;
+        padding: 0 20px 0 15px;
+        border-left: 6px solid transparent;
+        
+        font-size: 14px;
+
+        &:hover,
+        &:focus,
+        &.active{
+          border-left-color: $green;
+        }
+      }
     }
 
     > ul{
       top: 45px;
+
+      @media(max-width: $grid_tablet){
+        top: 0;
+      }
+    }
+
+    /* tablet&mobile style */
+    @media(max-width: $grid_tablet){
+      width: 100%;
+      margin-left: 0;
+
+      &:last-child{        
+        border-bottom: 0;
+      }
     }
   }
 
@@ -100,6 +166,12 @@
     top: 0;
     left: 0;
     background: #fff;
+
+    @media(max-width: $grid_tablet){
+      margin-left: 15px;
+      position: relative;
+      width: 100%;
+    }
 
     a,
     span{
@@ -120,6 +192,10 @@
 
     ul{
       left: calc(100% + 1px);
+
+      @media(max-width: $grid_tablet){
+        left: 0;
+      }
     }
 
     li {
@@ -131,4 +207,15 @@
       }
     }
   }
+
+  li { 
+    position: relative; 
+    @media(max-width: $grid_tablet){
+      // min-height: 39px !important;
+      height: auto !important;
+      line-height: 39px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
 }
