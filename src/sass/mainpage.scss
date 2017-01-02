@@ -7,6 +7,10 @@
 
   .ck_editor{ margin-bottom: 40px; }
 
+  @media(max-width: $grid_tablet){
+    padding: 70px 0;
+  }
+
   @media(max-width: $grid_mobile){
     padding: 50px 0;
   }
@@ -82,15 +86,12 @@
 
 .mainpage_banner_block{
   position: relative;
-  /* img fix ?*/ 
-  // line-height: 0;
   height: 600px !important;
   
   /* webpack issue.. */
-  background: $black 50% no-repeat;
+  background-color: $black;
+  -webkit-background-size: cover; 
   background-size: cover;
-
-  // min-height: 600px !important;
 
   .content{
     padding-top: 145px;
@@ -365,7 +366,13 @@ section.more{
 .news_block{
   text-align: left;
   border: 1px solid $darkgrey;
-
+  overflow: hidden;
+  
+  &:hover{
+    .fake{
+      display: flex;
+    }
+  }
   .fake{
     position: absolute;
     top: 0;
@@ -374,7 +381,8 @@ section.more{
     width: calc(100% - 30px);
     height: 100%;
 
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
