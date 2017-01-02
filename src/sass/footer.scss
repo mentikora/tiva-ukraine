@@ -14,6 +14,11 @@
       size: 16px;
       weight: 700;
     }
+
+    @media(max-width: $grid_tablet){
+      line-height: 12px;
+      font-size: 12px;
+    }
   }
   ul{
     a{ color: #fff; }
@@ -21,6 +26,10 @@
       margin-bottom: 37px;
       &:last-child{
         margin-bottom: 0;
+      }
+
+      @media(max-width: $grid_tablet){
+        margin-bottom: 30px;
       }
     }
   }
@@ -38,6 +47,11 @@
       size: 14px;
       weight: normal;
     }
+
+    @media(max-width: $grid_tablet){
+      line-height: 18px;
+      font-size: 12px;
+    }
   }
 
   .divider{
@@ -52,11 +66,20 @@
     margin-top: 30px;
     margin-bottom: 70px;
     color: #fff;
+
+    @media(max-width: $grid_tablet){
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
   }
   
   /* top */ 
   .top{
     padding: 55px 0 70px;
+    @media(max-width: $grid_tablet){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   /* bottom */
