@@ -125,6 +125,7 @@
 
     @media(max-width: $grid_mobile){
       text-align: left;
+      margin-top: 10px;
     }
     a{
       color: $green;
@@ -137,7 +138,7 @@
       display: inline-block;
       position: relative;
       margin-left: 15px;
-      top: 12px;
+      float: right;
     }
   }
 
