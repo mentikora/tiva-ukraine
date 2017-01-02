@@ -1458,11 +1458,13 @@ body {
   Top header mobile menu 
   ===============
 */
-#header_top_menu_mobile li {
-  width: 100%; }
-
-#header_top_menu_mobile.active {
-  border-top: 1px solid #000; }
+#header_top_menu_mobile {
+  display: none; }
+  #header_top_menu_mobile li {
+    width: 100%; }
+  #header_top_menu_mobile.active {
+    display: block;
+    border-top: 1px solid #000; }
 
 /* 
   Main navigation 

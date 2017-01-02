@@ -59,8 +59,6 @@
     margin-top: 10px;
     float: left;
   }
-
-
   
 }
 
@@ -70,11 +68,12 @@
 */
 #header_top_menu_mobile{
   // margin: 0 15px;
-  // display: none;
+  display: none;
   li{
     width: 100%;
   }
   &.active{
+    display: block;
     border-top: 1px solid #000;
   }
 
