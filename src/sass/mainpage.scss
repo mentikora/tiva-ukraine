@@ -188,94 +188,9 @@ section.more{
 /* 
   Category block 
   ==============
+
+  watch categories.scss
 */
-.mainpage_category_block{
-  position: relative;
-  margin-left: 15px;
-  margin-right: 15px;
-  
-  /* title */ 
-  p{
-    text-transform: uppercase;
-    color: #fff;
-    font: {
-      size: 18px;
-      weight: 900;
-    }
-  }
-
-  &:hover{
-    .bg_black{ display: flex; }
-  }
-
-  /* btn */ 
-  .btn{
-    margin-top: 30px;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    color: #fff;
-    font-size: 14px;
-  }
-
-  /* fake hover*/
-  .bg_black{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(0,0,0, .4);
-
-    width: 100%;
-    height: 100%;
-
-    // display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media(max-width: $grid_tablet){
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      background: 0;
-    }
-  }
-  
-  /* category block responive */ 
-  @media(max-width: $grid_tablet){
-    border: 1px solid $darkgrey;
-    padding-bottom: 75px;
-
-    p,
-    .btn{ color: $black; }
-
-    .bg_white{ 
-      padding-top: 20px;
-      width: 100%;
-      height: 75px;
-      background: #fff; 
-
-      .btn{ display: none; }
-    }
-
-    &:hover{
-      .bg_black{
-        background: rgba(0,0,0, .4);
-      }
-      .bg_white{
-        height: 125px;
-      }
-      .btn{
-        display: block;
-        &:hover{
-          color: #fff;
-        }
-      }
-    }
-  }
-}
 
 /* category slick */ 
 .category_slick_arrows{
