@@ -2106,6 +2106,8 @@ section.more .content {
       .category_block.onmainpage {
         border: 1px solid #898989;
         padding-bottom: 75px; }
+        .category_block.onmainpage .bg_white {
+          background: #fff; }
         .category_block.onmainpage p,
         .category_block.onmainpage .btn {
           color: #323232; }
@@ -2147,6 +2149,8 @@ section.more .content {
       height: 100px; }
     .category_block.oncatpage .btn {
       display: none; }
+    .category_block.oncatpage .bg_white {
+      background: #fff; }
     .category_block.oncatpage:hover .bg_black {
       background: rgba(0, 0, 0, 0.4); }
     .category_block.oncatpage:hover .bg_white {
@@ -2154,7 +2158,6 @@ section.more .content {
     .category_block.oncatpage:hover .btn {
       display: block; }
   .category_block .bg_white {
-    background: #fff;
     padding-top: 20px;
     width: 100%; }
   .category_block p {

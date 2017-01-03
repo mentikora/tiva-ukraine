@@ -40,7 +40,8 @@
     @media(max-width: $grid_tablet){
       border: 1px solid $darkgrey;
       padding-bottom: 75px;
-
+      
+      .bg_white{ background: #fff;}
       p,
       .btn{ color: $black; }
 
@@ -93,7 +94,10 @@
 
     .btn{
       display: none;
-      
+    }
+
+    .bg_white{
+      background: #fff;
     }
 
     &:hover{
@@ -105,7 +109,6 @@
   }
 
   .bg_white{
-    background: #fff;
     padding-top: 20px;
     width: 100%;
   }
