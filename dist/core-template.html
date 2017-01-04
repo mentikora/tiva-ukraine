@@ -14,7 +14,7 @@
   <!-- http://kenwheeler.github.io/slick/ -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-  <script src="./frontend/js/main.js"></script>
+  <script src="/front/js/main.js"></script>
 </head>
 <body>
   
@@ -61,17 +61,19 @@
           </div>
 
           <!-- mobile arrow down -->
-          <div id="header_top_mobile_button" class="visible-xs col-xs-2">
-            <span>
-              <i class="icon-arrow-down"></i>
-            </span>
+          <div class="visible-xs col-xs-2">
+            <div id="header_top_mobile_button">
+              <span>
+                <i class="icon-arrow-down"></i>
+              </span>
+            </div>
           </div>
 
           <!-- mobile menu toggle -->
           <ul class="col-xs-12" id="header_top_menu_mobile">
-            <li>tivaua@gmail.com</li>
-            <li>(032) 225 93 94</li>
-            <li>(032) 225 93 93 / (032) 225 93 94</li>
+            <li><i class="icon-mail-header"></i>tivaua@gmail.com</li>
+            <li><i class="icon-fax-header"></i>(032) 225 93 94</li>
+            <li><i class="icon-phone-header"></i>(032) 225 93 93 / (032) 225 93 94</li>
           </ul>
         </div>
       </div>
@@ -82,7 +84,7 @@
       <div class="container">
         <!-- logo -->
         <a href="javascript:void(0);" class="logo">
-          <img src="../src/img/logo.png" alt="logo">
+          <img src="/front/img/logo.png" alt="logo">
         </a>
         
         <!-- mobile btn -->
@@ -94,12 +96,14 @@
 
         <!-- main nav -->
         <ul id="nav">
-          <li><a href="javascript:void(0);">Головна</a></li>
+          <li class="active"><a href="javascript:void(0);">Головна</a></li>
           <li><a href="javascript:void(0);">Про нас</a></li>
           <li><a href="javascript:void(0);">Продукція</a></li>
           <li><a href="javascript:void(0);">Виробники і партнери</a></li>
           <li>
-            <span>Об'єкти</span>
+            <span class="arrow_down">
+              Об'єкти
+            </span>
             <!-- level 1 -->
             <ul>
               <li><a href="javascript:void(0);">level 1</a></li>
@@ -162,9 +166,12 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <img src="../src/img/footer_logo.png" alt="logo" class="footer_logo">
+          <img src="/front/img/footer_logo.png" alt="logo" class="footer_logo">
           <br>
-          <a href="javascript:void(0);" class="footer_contact_us_btn btn">зв'язатись з нами</a>
+
+          <div class="btn_wrapper">
+            <a href="javascript:void(0);" class="footer_contact_us_btn btn">зв'язатись з нами</a>
+          </div>
 
           <div class="socials">
             <h3>
@@ -186,7 +193,7 @@
           Сайт розроблено студією 
           <a href="http://welldostudio.com/" target="_blank">
             WellDo
-            <img src="../src/img/welldo.png" alt="welldo">
+            <img src="/front/img/welldo.png" alt="welldo">
           </a>
         </div>
       </div>

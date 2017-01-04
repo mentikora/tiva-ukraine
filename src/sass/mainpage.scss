@@ -26,7 +26,7 @@
 /* dots */
 .banner_dots{
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   right: 30px;
   top: 0;
   height: 100%;
@@ -60,6 +60,14 @@
       weight: 900;
     }
 
+    &:before{
+      content: '0';
+    }
+
+    &:after{
+      content: '.';
+    }
+
     @media(max-width: $grid_tablet){
       font-size: 12px;
     }
@@ -88,73 +96,77 @@
   position: relative;
   height: 600px !important;
   
-  /* webpack issue.. */
   background-color: $black;
-  -webkit-background-size: cover; 
-  background-size: cover;
-
-  .content{
-    padding-top: 145px;
+  // -webkit-background-size: cover; 
+  // background-size: cover;
+  
+  /* test style */ 
+  .container_fake{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 50%;
-    background: rgba(0,0,0, .6);
-    z-index: 2;
     height: 100%;
-    color: #fff;
-    line-height: 1.15;
-
-    .btn{
-      margin-top: 50px;
-      color: #fff;
-
-      @media(max-width: $grid_mobile){
-        margin-top: 25px;
-        width: 100%;
-      }
-    }
-
-    &.in_slider{
-      padding-left: 115px;
-    }
+    z-index: 1;
+    background: rgba(0,0,0, .6);
     
-    h2{
-      margin: 0 0 35px;
-      text-transform: uppercase;
-      font:{
-        size: 55px;
-        weight: normal; 
-      }
-      color: $green;
-      span{
-        font-weight: 900;
-        color: #fff;
-      }
+    &.inslider{
+      left: 50%;
     }
-
-    .ck_editor{
-      color: #fff;
-    }
-
-    @media(max-width: $grid_tablet){
-      padding: 75px 15px 0 70px;
-      h2{
-        font-size: 35px;
-      }
-    }
-
     @media(max-width: $grid_mobile){
       top: 15px !important;
       right: 15px !important;
       bottom: 15px !important;
       left: 15px !important;
-      padding: 50px 15px !important;
       width: calc(100% - 30px);
       height: calc(100% - 30px);
     }
-    
+
   }
+  .container{
+    z-index: 2;
+    position: relative;
+
+    display: flex;
+    height: 100%;
+  }
+  h2{
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font:{
+      size: 55px;
+      weight: normal; 
+    }
+    color: $green;
+    span{
+      font-weight: 900;
+      color: #fff;
+    }
+
+    @media(max-width: $grid_mobile){
+      font-size: 25px;
+    }
+
+    @media(max-width: $grid_tablet){
+      font-size: 35px;
+    }
+
+
+  }
+  .ck_editor{
+    color: #fff;
+    opacity: .7;
+  }
+
+  .ctnt{
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  /* */ 
+
   @media(max-width: $grid_tablet){
     height: 400px !important;
   }
@@ -163,7 +175,7 @@
 .welcome_text{
   height: 230px;
   background: $black;
-  padding-top: 70px;
+  padding-top: 76px;
   p{
     margin-top: 10px;
 
@@ -229,6 +241,26 @@ section.more{
     @media(max-width: $grid_tablet){
       margin: 0 15px 20px;
       font-size: 13px;
+
+      i{
+        top: 9px;
+      }
+    }
+  }
+
+  i{
+    position: relative;
+    line-height: 1px;
+    font-size: 30px;
+    display: inline-block;
+    height: 15px;
+    top: 7px;
+
+    &.icon-slide-arrow-left{
+      left: -7px;
+    }
+    &.icon-slide-arrow-right{
+      right: -7px;
     }
   }
 }
@@ -341,6 +373,7 @@ section.more{
     font-size: 14px;
     line-height: 24px;
     color: $darkgrey;
+    font-weight: normal;
   }
   @media(max-width: $grid_mobile){
     .content{

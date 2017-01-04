@@ -21,7 +21,13 @@
     }
   }
   ul{
-    a{ color: #fff; }
+    a{ 
+      color: #fff; 
+      @include transition(color .25s);
+      &:hover{
+        color: $green;
+      }
+    }
     li{
       margin-bottom: 37px;
       &:last-child{
@@ -161,6 +167,8 @@
 
     text-align: center;
     color: $darkgrey;
+
+    font-size: 28px;
 
     @include transition(all .25s ease);
 

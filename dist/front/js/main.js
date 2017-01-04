@@ -16,7 +16,14 @@ $(document).ready(function(){
 
   //show top => theme-def
   $('#header_top_mobile_button').on('click', function(){
-    $('#header_top_menu_mobile').toggleClass('active');
+    if( $(this).hasClass('active')){
+      console.lg0
+      $(this).removeClass('active');
+      $('#header_top_menu_mobile').slideUp().removeClass('active');
+    } else {
+      $(this).addClass('active');
+      $('#header_top_menu_mobile').slideDown().addClass('active');
+    }
   });
 
   // categories => filter

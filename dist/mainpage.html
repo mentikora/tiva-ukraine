@@ -53,7 +53,9 @@
               slidesToShow: 1
             }
           }
-        ]
+        ],
+        prevArrow: '<button type="button" class="slick-prev"><i class="icon-slide-arrow-left"></i>попередня</button>',
+        nextArrow: '<button type="button" class="slick-next">наступна<i class="icon-slide-arrow-right"></i></button>'
       });
     });
   </script> 
@@ -68,27 +70,63 @@
   <div class="relative">
     <div class="banner_dots"></div>
     <div class="mainpage_banner_wrapper">
+      
+      <!-- new test block -->
+      <div class="mainpage_banner_block" style="background: url('/front/img/mainpage_test_img.jpg') no-repeat 50%;">
+        <!-- fake container with bg -->
+        <div class="container_fake inslider"></div>
+        <div class="container in_slider">
+          <!-- empty -->
+          <div class="col-sm-6 hidden-xs"></div>
 
-      <div class="mainpage_banner_block" style="background: url(../dist/frontend/img/mainpage_test_img.jpg) no-repeat 50%;">
-        <div class="content in_slider">
-          <h2 class="title">
-            сміливі <br>
-            рішення <br>
-            <span>
-              для вашого <br> 
-              комфорту!
-            </span>
-          </h2>
-          <div class="ck_editor">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          <!-- thing -->
+          <div class="col-sm-1 hidden-xs"></div>
+          
+          <!-- slider content -->
+          <div class="col-xs-12 col-sm-5 ctnt">
+            <h2 class="title">
+              сміливий <br>
+              <span> 
+                комфорт!
+              </span>
+            </h2>
+            <div class="ck_editor">
+              Lorem 
+            </div>
           </div>
-        </div>      
+        </div>
       </div>
+      <!--  -->
 
-      <div class="mainpage_banner_block">
-        <!-- <img src="../src/img/test_img.jpg" alt="" class="img-responsive"> -->
-        <div class="content">2</div>      
+      <!-- new test block -->
+      <div class="mainpage_banner_block" style="background: url('/front/img/mainpage_test_img.jpg') no-repeat 50%;">
+        <!-- fake container with bg -->
+        <div class="container_fake"></div>
+        <div class="container in_slider">
+          <!-- empty -->
+          <div class="col-sm-6 hidden-xs"></div>
+
+          <!-- thing -->
+          <div class="col-sm-1 hidden-xs"></div>
+          
+          <!-- slider content -->
+          <div class="col-xs-12 col-sm-5 ctnt">
+            <h2 class="title">
+              сміливі <br>
+              рішення <br>
+              <span>
+                для вашого <br> 
+                комфорту!
+              </span>
+            </h2>
+            <div class="ck_editor">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </div>
+          </div>
+        </div>
       </div>
+      <!--  -->
 
     </div>
   </div>
@@ -114,7 +152,7 @@
     <div class="category_slick_arrows"></div>
     <div class="mainpage_categories_wrapper mainpage_slick_categories">
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 1</p>
@@ -125,7 +163,7 @@
         </div>
       </div>
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 2</p>
@@ -136,7 +174,7 @@
         </div>
       </div>
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 3</p>
@@ -147,7 +185,7 @@
         </div>
       </div>
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 4</p>
@@ -158,7 +196,7 @@
         </div>
       </div>
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 5</p>
@@ -169,7 +207,7 @@
         </div>
       </div>
       <div class="category_block onmainpage">
-        <img src="../src/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
+        <img src="/front/img/product_test_image.jpg" alt="product_test_image" class="img-responsive">
         <div class="bg_black">
           <div class="bg_white">
             <p>Котли 6</p>
@@ -188,23 +226,36 @@
 <!-- more -->
 <section class="more">
 
-    <div class="mainpage_banner_block">
-      <!-- <img src="../src/img/test_img.jpg" alt="" class="img-responsive"> -->
-      <div class="content">
-        <div class="col-md-offset-4">
-          <h2 class="title">
-            Дізнайтесь<br>
-            <span>
-              ПРО НАС більше!
-            </span>
-          </h2>
-          <div class="ck_editor">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          </div>
-          <a href="javascript:void(0);" class="btn">ДЕТАЛЬНІШЕ</a>
+  <!-- new test block -->
+  <div class="mainpage_banner_block" style="background: url('/front/img/mainpage_test_img.jpg') no-repeat 50%;">
+    <!-- fake container with bg -->
+    <div class="container_fake"></div>
+    <div class="container in_slider">
+
+      <!-- thing -->
+      <div class="col-sm-1 hidden-xs"></div>
+      
+      <!-- slider content -->
+      <div class="col-xs-12 col-sm-5 ctnt">
+        <h2 class="title">
+          сміливі <br>
+          рішення <br>
+          <span>
+            для вашого <br> 
+            комфорту!
+          </span>
+        </h2>
+        <div class="ck_editor">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
         </div>
-      </div>      
+      </div>
+
+      <!-- empty -->
+      <div class="col-sm-6 hidden-xs"></div>
     </div>
+  </div>
+  <!--  -->
 
 </section>
 
