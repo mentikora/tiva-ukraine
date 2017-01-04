@@ -67,6 +67,16 @@
         }
       }
     }
+    
+    @media(min-width: $grid_tablet){
+      .bg_black{
+        opacity: 0;
+        @include transition(opacity .5s linear);
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
 
     &:hover{
       .bg_black{ 

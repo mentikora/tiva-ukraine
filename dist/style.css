@@ -2313,6 +2313,13 @@ section.more .btn {
           display: block; }
           .category_block.onmainpage:hover .btn:hover {
             color: #fff; } }
+    @media (min-width: 991px) {
+      .category_block.onmainpage .bg_black {
+        opacity: 0;
+        -webkit-transition: opacity 0.5s linear;
+        transition: opacity 0.5s linear; }
+        .category_block.onmainpage .bg_black:hover {
+          opacity: 1; } }
     .category_block.onmainpage:hover .bg_black {
       display: -webkit-box;
       display: -ms-flexbox;
