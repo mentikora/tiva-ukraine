@@ -17,6 +17,19 @@
     margin-bottom: 25px;
   }
 
+  .h2_style{
+    @media(max-width: $grid_tablet){
+      margin-bottom: 15px;
+    }
+  }
+
+  .h3_style{
+    margin-top: 100px;
+    @media(max-width: $grid_tablet){
+      margin-top: 50px;
+    }
+  }
+
   .flex_grid{
     margin-top: 50px;
     display: flex;
@@ -40,6 +53,16 @@
       .text{
         padding-top: 20px;
       }
+    }
+  }
+  .ck_editor{
+    color: $darkgrey;
+  }
+  .ck_editor.bold{
+    color: #464646;
+    margin-bottom: 40px;
+    @media(max-width: $grid_tablet){
+      margin-bottom: 25px;
     }
   }
 }

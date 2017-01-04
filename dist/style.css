@@ -2200,6 +2200,16 @@ section.more .btn {
   color: #323232;
   margin-bottom: 25px; }
 
+@media (max-width: 991px) {
+  .about_page .h2_style {
+    margin-bottom: 15px; } }
+
+.about_page .h3_style {
+  margin-top: 100px; }
+  @media (max-width: 991px) {
+    .about_page .h3_style {
+      margin-top: 50px; } }
+
 .about_page .flex_grid {
   margin-top: 50px;
   display: -webkit-box;
@@ -2229,6 +2239,16 @@ section.more .btn {
       margin-top: 30px; }
       .about_page .flex_grid .text {
         padding-top: 20px; } }
+
+.about_page .ck_editor {
+  color: #898989; }
+
+.about_page .ck_editor.bold {
+  color: #464646;
+  margin-bottom: 40px; }
+  @media (max-width: 991px) {
+    .about_page .ck_editor.bold {
+      margin-bottom: 25px; } }
 
 .categories_page .category_empty {
   text-align: center; }
