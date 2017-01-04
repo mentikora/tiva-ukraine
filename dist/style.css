@@ -424,6 +424,18 @@ p {
 /*
   Grid
 */
+@-webkit-keyframes displayb /* Safari and Chrome */ {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes displayb {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 @-ms-viewport {
   width: device-width; }
 
@@ -2205,7 +2217,8 @@ section.more .btn {
     margin-bottom: 15px; } }
 
 .about_page .h3_style {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 0; }
   @media (max-width: 991px) {
     .about_page .h3_style {
       margin-top: 50px; } }
@@ -2303,7 +2316,8 @@ section.more .btn {
     .category_block.onmainpage:hover .bg_black {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      background: rgba(0, 0, 0, 0.4); }
   .category_block.oncatpage {
     border: 1px solid #898989;
     padding-bottom: 100px;
@@ -2325,7 +2339,9 @@ section.more .btn {
     .category_block.oncatpage .bg_white {
       height: 100px; }
     .category_block.oncatpage .btn {
-      display: none; }
+      -webkit-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0; }
     .category_block.oncatpage .bg_white {
       background: #fff; }
     .category_block.oncatpage:hover .bg_black {
@@ -2333,10 +2349,12 @@ section.more .btn {
     .category_block.oncatpage:hover .bg_white {
       height: 160px; }
     .category_block.oncatpage:hover .btn {
-      display: block; }
+      opacity: 1; }
   .category_block .bg_white {
     padding-top: 20px;
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out; }
   .category_block p {
     text-transform: uppercase;
     color: #fff;
@@ -2356,9 +2374,9 @@ section.more .btn {
     top: 0;
     left: 0;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
+    overflow: hidden;
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2369,7 +2387,9 @@ section.more .btn {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out; }
     @media (max-width: 991px) {
       .category_block .bg_black {
         display: -webkit-box;

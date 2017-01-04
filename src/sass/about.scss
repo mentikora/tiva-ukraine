@@ -25,6 +25,7 @@
 
   .h3_style{
     margin-top: 100px;
+    margin-bottom: 0;
     @media(max-width: $grid_tablet){
       margin-top: 50px;
     }

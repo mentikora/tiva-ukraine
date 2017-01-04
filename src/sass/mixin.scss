@@ -5,3 +5,27 @@
   -o-transition: $args;
   transition: $args;
 }
+
+@-webkit-keyframes displayb /* Safari and Chrome */
+{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-o-keyframes displayb /* Opera */
+{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-ms-keyframes displayb /* IE10 */
+{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes displayb
+{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

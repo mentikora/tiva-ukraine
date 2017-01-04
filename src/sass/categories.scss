@@ -67,8 +67,12 @@
         }
       }
     }
+
     &:hover{
-      .bg_black{ display: flex; }
+      .bg_black{ 
+        display: flex; 
+        background: rgba(0,0,0, .4);
+      }
     }
   }
   
@@ -93,7 +97,9 @@
     }
 
     .btn{
-      display: none;
+      @include transition(opacity .3s ease-in-out);
+      // display: none;
+      opacity: 0
     }
 
     .bg_white{
@@ -103,7 +109,10 @@
     &:hover{
       .bg_black{ background: rgba(0,0,0, .4);}
       .bg_white{ height: 160px; }
-      .btn{ display: block; }
+      .btn{
+        opacity: 1; 
+        // display: block; 
+      }
     }
     
   }
@@ -111,6 +120,8 @@
   .bg_white{
     padding-top: 20px;
     width: 100%;
+
+    @include transition(height .5s ease-in-out);
   }
 
   /* title */ 
@@ -142,16 +153,17 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background: rgba(0,0,0, .4);
-
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
     // display: flex;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include transition(background .5s ease-in-out);
 
     @media(max-width: $grid_tablet){
       display: flex;
