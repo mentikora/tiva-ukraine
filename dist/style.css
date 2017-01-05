@@ -1586,14 +1586,23 @@ body {
           #nav > li > span:focus,
           #nav > li > span.active {
             border-left-color: #8fc73e; } }
-    #nav > li.active:after {
-      content: '';
-      position: absolute;
-      bottom: -26px;
-      left: 0;
-      height: 4px;
-      width: 100%;
-      background: #8fc73e; }
+    #nav > li.active {
+      /* tablet/mobile active*/
+      /* desktop active */ }
+      @media (max-width: 991px) {
+        #nav > li.active > a,
+        #nav > li.active > span {
+          border-left-color: #8fc73e;
+          color: #8fc73e; } }
+      @media (min-width: 991px) {
+        #nav > li.active:after {
+          content: '';
+          position: absolute;
+          bottom: -26px;
+          left: 0;
+          height: 4px;
+          width: 100%;
+          background: #8fc73e; } }
     #nav > li > ul {
       top: 45px; }
       @media (max-width: 991px) {
@@ -1605,6 +1614,9 @@ body {
         margin-left: 0; }
         #nav > li:last-child {
           border-bottom: 0; } }
+    @media (min-width: 1200px) {
+      #nav > li {
+        margin: 0 20px; } }
   #nav ul {
     display: none;
     min-width: 160px;

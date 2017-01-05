@@ -156,16 +156,28 @@
         }
       }
     }
-
+    
     &.active{
-      &:after{
-        content: '';
-        position: absolute;
-        bottom: -26px;
-        left: 0;
-        height: 4px;
-        width: 100%;
-        background: $green;
+      /* tablet/mobile active*/
+      @media(max-width: $grid_tablet){
+        > a,
+        > span{
+          border-left-color: $green;
+          color: $green;
+        }
+      }
+
+      /* desktop active */
+      @media(min-width: $grid_tablet){
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: -26px;
+          left: 0;
+          height: 4px;
+          width: 100%;
+          background: $green;
+        }
       }
     }
 
@@ -185,6 +197,10 @@
       &:last-child{        
         border-bottom: 0;
       }
+    }
+
+    @media(min-width: $grid_desktop){
+      margin: 0 20px;
     }
   }
 
