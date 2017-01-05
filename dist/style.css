@@ -1553,7 +1553,8 @@ body {
 #nav {
   float: right;
   margin-top: 26px;
-  /* forEach inner ul/a/span */ }
+  /* forEach inner ul/a/span */
+  /* forEach span*/ }
   @media (max-width: 991px) {
     #nav {
       margin-top: 10px;
@@ -1665,6 +1666,23 @@ body {
         height: auto !important;
         line-height: 39px;
         border-bottom: 1px solid #e5e5e5; } }
+  #nav span i {
+    display: inline-block;
+    margin-left: 4px;
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+    @media (min-width: 991px) {
+      #nav span i.to_right {
+        top: -1px;
+        margin-left: 12px;
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg); } }
+    @media (max-width: 991px) {
+      #nav span i {
+        top: -1px; } }
 
 .mobile_menu_btn {
   float: right;
@@ -2748,15 +2766,15 @@ ul.circle {
       left: 0;
       top: 7px; }
 @font-face {
-  font-family: 'Tiva-icons-font';
-  src: url("/front/fonts/Tiva-icons-font.eot");
-  src: url("/front/fonts/Tiva-icons-font.eot?nzb7gv#iefix") format("embedded-opentype"), url("/front/fonts/Tiva-icons-font.ttf?nzb7gv") format("truetype"), url("/front/fonts/Tiva-icons-font.woff?nzb7gv") format("woff"), url("/front/fonts/Tiva-icons-font.svg?nzb7gv#Tiva-icons-font") format("svg");
+  font-family: 'icomoon';
+  src: url("/front/fonts/icomoon.eot?pqij74");
+  src: url("/front/fonts/icomoon.eot?pqij74#iefix") format("embedded-opentype"), url("/front/fonts/icomoon.ttf?pqij74") format("truetype"), url("/front/fonts/icomoon.woff?pqij74") format("woff"), url("/front/fonts/icomoon.svg?pqij74#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Tiva-icons-font' !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2767,62 +2785,65 @@ ul.circle {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-arrow-down:before {
+.icon-down-arrow:before {
   content: "\E900"; }
 
-.icon-arrow-right:before {
+.icon-arrow-down:before {
   content: "\E901"; }
 
-.icon-arrow-up:before {
+.icon-arrow-right:before {
   content: "\E902"; }
 
-.icon-arrow-left:before {
+.icon-arrow-up:before {
   content: "\E903"; }
 
-.icon-slide-arrow-left:before {
+.icon-arrow-left:before {
   content: "\E904"; }
 
-.icon-slide-arrow-right:before {
+.icon-slide-arrow-left:before {
   content: "\E905"; }
 
-.icon-facebook:before {
+.icon-slide-arrow-right:before {
   content: "\E906"; }
 
-.icon-vk:before {
+.icon-facebook:before {
   content: "\E907"; }
 
-.icon-g:before {
+.icon-vk:before {
   content: "\E908"; }
 
-.icon-mail-header:before {
+.icon-g:before {
   content: "\E909"; }
 
-.icon-fax-header:before {
+.icon-mail-header:before {
   content: "\E90A"; }
 
-.icon-phone-header:before {
+.icon-fax-header:before {
   content: "\E90B"; }
 
-.icon-date:before {
+.icon-phone-header:before {
   content: "\E90C"; }
 
-.icon-home:before {
+.icon-date:before {
   content: "\E90D"; }
 
-.icon-location-small:before {
+.icon-home:before {
   content: "\E90E"; }
 
-.icon-empty-box:before {
+.icon-location-small:before {
   content: "\E90F"; }
 
-.icon-location-large:before {
+.icon-empty-box:before {
   content: "\E910"; }
 
-.icon-phone-large:before {
+.icon-location-large:before {
   content: "\E911"; }
 
-.icon-mail-large:before {
+.icon-phone-large:before {
   content: "\E912"; }
 
-.icon-map-location:before {
+.icon-mail-large:before {
   content: "\E913"; }
+
+.icon-map-location:before {
+  content: "\E914"; }

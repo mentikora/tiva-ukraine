@@ -271,10 +271,35 @@
   li { 
     position: relative; 
     @media(max-width: $grid_tablet){
-      // min-height: 39px !important;
       height: auto !important;
       line-height: 39px;
       border-bottom: 1px solid #e5e5e5;
+    }
+  }
+  
+  /* forEach span*/
+  span{
+
+    i{
+      display: inline-block;
+      margin-left: 4px;
+      position: relative;
+      top: -2px;
+
+      font-size: 10px;
+      transform: rotate(0deg);
+      
+      @media(min-width: $grid_tablet){
+        &.to_right{
+          top: -1px;
+          margin-left: 12px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      @media(max-width: $grid_tablet){
+        top: -1px;
+      }
     }
   }
 
