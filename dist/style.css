@@ -2007,13 +2007,28 @@ body {
       height: 400px !important; } }
 
 .welcome_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 230px;
-  background: #323232;
-  padding-top: 76px; }
+  background: #323232; }
+  .welcome_text h1 {
+    line-height: 55px; }
   .welcome_text p {
-    margin-top: 10px;
+    margin-top: 25px;
     text-transform: uppercase;
     font-size: 30px;
+    line-height: 30px;
     color: #fff; }
 
 /* 
