@@ -243,9 +243,25 @@
   align-items: center;
   height: 230px;
   background: $black;
+  text-align: center;
+  
+  @media(max-width: $grid_tablet){
+    height: 160px;
+  }
+
+  @media(max-width: $grid_mobile){
+    height: 180px;
+  }
 
   h1{
     line-height: 55px;
+    @media(max-width: $grid_tablet){
+      line-height: 35px;
+    }
+    @media(max-width: $grid_mobile){
+      font-size: 25px;
+      line-height: 25px;
+    }
   }
   p{
     margin-top: 25px;
@@ -254,6 +270,10 @@
     font-size: 30px;
     line-height: 30px;
     color: #fff;
+    @media(max-width: $grid_tablet){
+      margin-top: 18px;
+      font-size: 20px;
+    }
   }
 }
 
