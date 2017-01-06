@@ -424,29 +424,55 @@ p {
 /*
   Grid
 */
-@-webkit-keyframes displayb /* Safari and Chrome */ {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
-@-o-keyframes displayb /* Opera */ {
+@-webkit-keyframes fadeInDown {
   from {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
 
-@-ms-keyframes displayb /* IE10 */ {
+@keyframes fadeInDown {
   from {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
 
-@keyframes displayb {
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeOutUp {
   from {
-    opacity: 0; }
+    opacity: 1; }
   to {
-    opacity: 1; } }
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp; }
 
 @-ms-viewport {
   width: device-width; }
@@ -1534,6 +1560,8 @@ body {
   #header .bottom {
     min-height: 70px;
     border-bottom: 1px solid #d2d2d2; }
+    #header .bottom .container {
+      position: relative; }
   #header .logo {
     margin-top: 10px;
     float: left; }
@@ -1584,7 +1612,11 @@ body {
   /* forEach span*/ }
   @media (max-width: 991px) {
     #nav {
-      margin-top: 10px;
+      margin-top: 0px;
+      position: absolute;
+      top: 70px;
+      background: #fff;
+      z-index: 9999;
       margin-left: -15px;
       margin-right: -15px;
       display: none; }
@@ -2165,6 +2197,11 @@ section.more .btn {
     left: -7px; }
   .category_slick_arrows i.icon-slide-arrow-right {
     right: -7px; }
+
+/* mainpage categories */
+@media (max-width: 767px) {
+  .mainpage_categories > .btn {
+    width: calc(100% - 30px); } }
 
 /* mainpage advantages */
 .mainpage_advantages {

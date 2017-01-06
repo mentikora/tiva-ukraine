@@ -389,6 +389,15 @@ section.more{
   }
 }
 
+/* mainpage categories */
+.mainpage_categories{
+  @media(max-width: $grid_mobile){
+    > .btn{
+      width: calc(100% - 30px);
+    }
+  }
+}
+
 /* mainpage advantages */ 
 .mainpage_advantages{
   background: #fbfbfb;

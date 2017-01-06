@@ -5,13 +5,19 @@ $(document).ready(function(){
   //show nav => theme-def
   $('.mobile_menu_btn').on('click', function(){
     $(this).toggleClass('active');
-    ($('#nav').is('.active')) ? $('#nav, #nav .active').removeClass('active') : $('#nav').addClass('active');
+    $('#nav').slideToggle(200);
+    if ($('#nav').is('.active')){ 
+      $('#nav ul.active').slideUp();
+      $('#nav, #nav .active').removeClass('active');
+    } else{
+      $('#nav').addClass('active');
+    }
   });
 
   //add active to domtree => theme-def
   $('#nav span').on('click', function(e){
     e.stopPropagation();
-    $(this).toggleClass('active').siblings('ul').toggleClass('active');;
+    $(this).toggleClass('active').siblings('ul').slideToggle(200).toggleClass('active');
   });
 
   //show top => theme-def
