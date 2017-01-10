@@ -2079,11 +2079,11 @@ body {
         margin-bottom: 15px; } }
     .mainpage_banner_block .title_not_slider:before {
       content: '';
-      background: url("/front/img/line_bg_xxl.png") no-repeat right 0;
+      background: rgba(255, 255, 255, 0.5);
       width: 200%;
-      height: 7px;
+      height: 1px;
       position: absolute;
-      top: 25px;
+      top: 27px;
       left: calc(-200% - 30px);
       z-index: 10; }
       @media (max-width: 767px) {
@@ -2091,6 +2091,23 @@ body {
           display: none; } }
       @media (max-width: 991px) {
         .mainpage_banner_block .title_not_slider:before {
+          top: 17px; } }
+    .mainpage_banner_block .title_not_slider:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 10;
+      width: 7px;
+      height: 7px;
+      background: #8fc73e;
+      border-radius: 50%;
+      top: 25px;
+      left: -30px; }
+      @media (max-width: 767px) {
+        .mainpage_banner_block .title_not_slider:after {
+          display: none; } }
+      @media (max-width: 991px) {
+        .mainpage_banner_block .title_not_slider:after {
           top: 15px; } }
   @media (max-width: 991px) {
     .mainpage_banner_block {
