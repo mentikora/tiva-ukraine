@@ -1,10 +1,19 @@
 .news_page{
 	@extend ._page;
+	
+	h1.h2_style{
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
 
 	.news_item{
 		float: left;
 		width: 100%;
 		margin-top: 50px;
+
+		@media(max-width: $grid_tablet){
+			margin-top: 30px;
+		}
 
 		&:first-child{
 			margin-top: 0;
@@ -15,8 +24,16 @@
 			font-size: 12px;
 			color: $darkgrey;
 
+			img{
+				width: 15px;
+				display: inline-block;
+				margin-right: 4px;
+				position: relative;
+				top: 2px;
+			}
+
 			@media(max-width: $grid_tablet){
-				margin: 0 0 25px;
+				margin: 0 0 15px;
 				font-size: 10px;
 			}
 
@@ -41,17 +58,53 @@
 			&:hover{
 				color: $green;
 			}
+
+			@media(max-width: $grid-tablet){
+				font-size: 16px;
+			}
 		}
 
 		.ck_editor{
 			color: $darkgrey;
-			margin-bottom: 50px;
+			margin-bottom: 40px;
 
 			@media(max-width: $grid_mobile){
+				/* margin-bottom: 25px; */
+			}
+			
+			@media(max-width: $grid-tablet){
+				font-size: 12px;
 				margin-bottom: 25px;
 			}
 		}
+
+		.btn{
+			@media(max-width: $grid_tablet){
+				width: 160px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 13px;
+			}
+			@media(max-width: $grid_mobile){
+				width: 100%;
+			}
+		}
 	}	
+
+	.line_bg{
+		margin-left: -30px;
+		width: calc(100% + 30px);
+		background: rgba($black, .5);
+		margin-top: 78px;
+		
+		@media(max-width: $grid-tablet){
+			margin-top: 43px;
+		}
+
+		@media(max-width: $grid_mobile){
+			display: none;
+		}
+	}
 }
 
 /* 
@@ -64,6 +117,10 @@
 		color: $black;
 		text-align: center;
 		margin-bottom: 0;
+
+		@media(max-width: $grid-tablet){
+			font-size: 20px;
+		}
 	}
 
 	.date{
@@ -73,17 +130,55 @@
 		font-size: 12px;
 		line-height: 14px;
 		color: $darkgrey;
+
+		@media(max-width: $grid-tablet){
+			font-size: 10px;
+		}
+
+		img{
+			width: 15px;
+			display: inline-block;
+			margin: 0 4px 0 0;
+			position: relative;
+			top: 2px;
+
+			@media(max-width: $grid-tablet){
+				top: 4px;
+			}
+		}
 	}
 	img{
 		margin: 25px 0;
+		@media(max-width: $grid-tablet){
+			margin: 15px 0;
+		}
 	}
 
 	.share{ 
 		margin-top: 25px;
 		span{
+			display: block;
+			float: left;
+			height: 33px;
+			line-height: 33px;
 			padding-right: 20px;
 			font-size: 12px;
 			color: $black;
+
+			@media(max-width: $grid-tablet){
+				font-size: 10px;
+			}
+		}
+		a:hover,
+		a:focus{
+			color: #fff;
+		}
+	}
+
+	.ck_editor{
+		color: $darkgrey;
+		@media(max-width: $grid-tablet){
+			font-size: 12px;
 		}
 	}
 }

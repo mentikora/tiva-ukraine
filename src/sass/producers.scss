@@ -8,6 +8,10 @@
 
 .producers_item{
 	margin-bottom: 50px;
+	@media(max-width: $grid_tablet){
+		margin-bottom: 30px;
+	}
+
 	.img_wrap{
 		height: 185px;
 		display: flex;
@@ -26,6 +30,10 @@
 
 		height: 1px;
 		background: $darkgrey;
+
+		@media(max-width: $grid_tablet){
+			margin: 0 0 18px;
+		}
 	}
 	.title{
 		display: inline-block;
@@ -44,11 +52,20 @@
 		&:hover{
 			color: $green;
 		}
+
+		@media(max-width: $grid_tablet){
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
 	}
 	.ck_editor{
 		font-weight: normal;
 		font-size: 14px;
 		color: #898989;
+
+		@media(max-width: $grid_tablet){
+			font-size: 12px;
+		}
 	}
 
 }

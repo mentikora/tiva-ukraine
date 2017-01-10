@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="./frontend/js/main.js"></script>
+  <script src="/front/js/main.js"></script>
 </head>
 <body>
 
@@ -65,6 +65,7 @@
     <!-- categories -->
     <div class="col-sm-8 col-md-9">
       <div class="category_empty">
+        <i class="icon-empty-box"></i>
         <p>
           по даному запиту не знайдено жодного продукту
         </p>
@@ -117,33 +118,37 @@
         </div>
       </div>
       
-      <div class="col-md-12">
-        <div class="pagination">
-          <!-- <div class="prev">prev</div> -->
-          <ul>
-            <li class="prev">
-              <a href="javascript:void(0);">попередня</a>
-            </li>
-            <li class="active">
-              <span>1</span>
-            </li>
-            <li>
-              <a href="javascript:void(0);">2</a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">3</a>
-            </li>
-            <li class="next">
-              <a href="javascript:void(0);">наступна</a>
-            </li>
-          </ul>
-          <!-- <div class="next">next</div> -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pagination">
+            <!-- <div class="prev">prev</div> -->
+            <ul>
+              <li class="prev">
+                <i class="icon-slide-arrow-left"></i>
+                <a href="javascript:void(0);">попередня</a>
+              </li>
+              <li class="active">
+                <span>1</span>
+              </li>
+              <li>
+                <a href="javascript:void(0);">2</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">3</a>
+              </li>
+              <li class="next">
+                <a href="javascript:void(0);">наступна</a>
+                <i class="icon-slide-arrow-right"></i>
+              </li>
+            </ul>
+            <!-- <div class="next">next</div> -->
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-12">
-        <div class="ck_editor">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque
+        <div class="col-md-12">
+          <div class="ck_editor">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque
+          </div>
         </div>
       </div>
     </div>

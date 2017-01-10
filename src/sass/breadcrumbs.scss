@@ -3,7 +3,7 @@
 
   @extend .clearfix;
 
-  @media(max-width: $grid_mobile){
+  @media(max-width: $grid_tablet){
     margin: 30px 0;    
   }
 
@@ -37,6 +37,10 @@
       right: -20px;
       color: $darkgrey;
       font-size: 10px;
+
+      @media(max-width: $grid_tablet){
+        top: 0;
+      }
     }
 
     &:first-child{
