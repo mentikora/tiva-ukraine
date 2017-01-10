@@ -30,7 +30,10 @@
       margin-top: 50px;
     }
   }
-
+  
+  .about_img_wrap{
+    z-index: 10;
+  }
   .flex_grid{
     margin-top: 50px;
     display: flex;
@@ -44,6 +47,31 @@
         line-height: 24px;
         color: $darkgrey;
         text-transform: uppercase;
+        
+        .content{
+          position: relative;
+
+          &.toright:before{
+            left: auto;
+            right: -130px;
+            transform: rotate(180deg);
+          }
+
+          &:before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 7px;
+            position: absolute;
+            background: url('/front/img/line_bg_xl.png') no-repeat 0 0;
+            top: 8px;
+            left: -130px;
+
+            @media(max-width: $grid_mobile){
+              display: none;
+            }
+          }
+        }
 
         @media(max-width: $grid_tablet){
           font-size: 12px;
