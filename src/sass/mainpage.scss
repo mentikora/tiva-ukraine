@@ -81,11 +81,24 @@
   @media(max-width: $grid_tablet){
     top: auto;
     bottom: 30px;
-    left: 0;
+    left: auto;
     right: auto;
-    width: 100%;
+    width: 750px;
     flex-direction: row;
     height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    display: block;
+
+    ul{
+      width: 41.66666667%;
+      margin-left: calc(58.33333333% + 15px);
+      text-align: left;
+    }
 
     li{
       display: inline-block;
@@ -93,6 +106,18 @@
       height: 20px;
       line-height: 20px;
       vertical-align: middle;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media(max-width: $grid_mobile){
+    width: 100%;
+    ul{
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
     }
   }
 }
