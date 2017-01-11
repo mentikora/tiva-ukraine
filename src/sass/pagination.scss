@@ -1,5 +1,6 @@
 .pagination{
-	margin-bottom: 30px;
+	margin-top: 45px;
+	// margin-bottom: 30px;
 
 	@extend .clearfix;
 
@@ -16,9 +17,36 @@
 		li{
 			display: inline-block;	
 			vertical-align: middle;
+			position: relative;
 			height: 30px;
 			line-height: 30px;
 			margin: 0 8px;
+
+			&.prev,
+			&.next{
+				*{ color: $black; }
+				span{
+					font-size: 16px;
+
+					@media(max-width: $grid_tablet){
+						font-size: 13px;
+					}
+				}
+
+				&.not_active *{
+					color: #918f8f !important;
+					cursor: default;
+				}
+				
+				a, span{
+
+					&:before,
+					&:after{
+						display: none;
+					}
+				}
+				
+			}
 
 			&:first-child{
 				margin-left: 0;
@@ -30,7 +58,12 @@
 			&.active *{
 				font-size: 30px;
 				color: $green;
+
+				@media(max-width: $grid_tablet){
+					font-size: 20px;
+				}
 			}
+
 		}
 
 		a,
@@ -40,7 +73,49 @@
 				weight: 900;
 			}
 			line-height: 30px;
-			color: #7f7f7f;
+			color: #918f8f;
+			position: relative;
+
+			@include transition(color .25s);
+
+			&:hover,
+			&:hover *{
+				color: $green;
+			}
+
+			&:before{
+				content: '0';
+			}
+			&:after{
+				content: '.';
+			}
+
+			@media(max-width: $grid_mobile){
+				font-size: 12px;
+			}
 		}
+
+
+	}
+
+	i{
+		position: relative;
+    line-height: 1px;
+    font-size: 30px;
+    display: inline-block;
+    height: 15px;
+    top: 7px;
+    @include transition(color .25s);
+
+    &.icon-slide-arrow-left{
+    	left: -7px;
+    }
+    &.icon-slide-arrow-right{
+    	right: -7px;
+    }
+
+    @media(max-width: $grid_tablet){
+    	top: 9px;
+    }
 	}
 }

@@ -26,6 +26,7 @@
 	===========
 */ 
 .departments{
+	padding-top: 65px;
 	padding-bottom: 100px;
 	background: #fbfbfb;
 
@@ -41,6 +42,17 @@
 
 		@media(max-width: $grid_mobile){
 			margin-top: 30px;
+		}
+
+		i{
+			display: inline-block;
+			width: 30px;
+			margin-left: -10px;
+			margin-right: 10px;
+
+			color: $green;
+			font-size: 32px;
+			line-height: 24px;
 		}
 	}
 	.title{
@@ -69,12 +81,19 @@
 		line-height: 24px;
 		color: $darkgrey;
 
+		@extend .clearfix;
+
+		display: flex;
+		align-items: flex-start;
+
 		@media(max-width: $grid_mobile){
 			font-size: 12px;
 		}
 	}
 
-	.location{}
+	.location{
+		margin-bottom: 30px;
+	}
 	.telephone{}
 }
 
@@ -163,6 +182,7 @@
 .map{
 	height: 500px;
 	background: #000;
+	overflow: hidden;
 	@extend .clearfix;
 
 	@media(max-width: $grid_tablet){

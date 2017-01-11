@@ -51,7 +51,20 @@
       display: none;
     }
   }
-  span{}
-  a{}
-  .active{}
+  a{
+    @include transition(color .25s);
+    &:hover{
+      color: $green;
+    }
+  }
+
+  .icon-home{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    margin-left: -6px;
+
+    font-size: 27px;
+  }
 }

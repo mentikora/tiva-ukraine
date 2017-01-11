@@ -85,17 +85,22 @@
 
   /* btn */
   .btn{ 
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 70px;
     color: #fff;
 
-    @media(max-width: $grid_mobile){
+    /* @media(max-width: $grid_mobile){
       width: 100%;
-    }
+    } */
 
     @media(max-width: $grid_tablet){
       margin-top: 20px;
       margin-bottom: 30px;
+
+      height: 38px;
+      line-height: 38px;
+      font-size: 13px;
     }
   }
   
