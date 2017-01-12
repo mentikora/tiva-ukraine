@@ -2792,7 +2792,8 @@ section.more .btn {
     color: #fff; }
     .filter li.active a:hover {
       color: #fff; }
-  .filter li:hover a {
+  .filter li:hover a,
+  .filter li.active span {
     border-left-color: #8fc73e;
     color: #8fc73e; }
   @media (max-width: 767px) {

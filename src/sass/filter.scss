@@ -51,7 +51,8 @@
 				color: #fff;
 			}
 		}
-		&:hover a{
+		&:hover a,
+    &.active span {
 			border-left-color: $green;
 			color: $green;
 		}
