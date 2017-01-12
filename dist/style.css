@@ -1410,7 +1410,8 @@ body {
       margin: 30px 0; } }
   .breadcrumbs li,
   .breadcrumbs span,
-  .breadcrumbs a {
+  .breadcrumbs a,
+  .breadcrumbs a span {
     font-size: 14px;
     font-weight: 700;
     color: #323232;
@@ -1418,7 +1419,8 @@ body {
     @media (max-width: 991px) {
       .breadcrumbs li,
       .breadcrumbs span,
-      .breadcrumbs a {
+      .breadcrumbs a,
+      .breadcrumbs a span {
         font-size: 12px; } }
   .breadcrumbs span {
     color: #898989; }
