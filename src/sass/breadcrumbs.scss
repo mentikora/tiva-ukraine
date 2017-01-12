@@ -54,7 +54,8 @@
   }
   a{
     @include transition(color .25s);
-    &:hover{
+    &:hover,
+    &:hover span {
       color: $green;
     }
   }

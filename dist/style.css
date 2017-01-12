@@ -1446,7 +1446,8 @@ body {
   .breadcrumbs a {
     -webkit-transition: color 0.25s;
     transition: color 0.25s; }
-    .breadcrumbs a:hover {
+    .breadcrumbs a:hover,
+    .breadcrumbs a:hover span {
       color: #8fc73e; }
   .breadcrumbs .icon-home {
     display: inline-block;
