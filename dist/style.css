@@ -2443,6 +2443,14 @@ section.more .btn {
     margin-bottom: 25px;
     font-size: 12px;
     color: #898989; }
+    .news_block .date .icon-date {
+      display: inline-block;
+      height: 17px;
+      line-height: 17px;
+      margin-top: -2px;
+      margin-left: -5px;
+      vertical-align: middle;
+      font-size: 25px; }
     @media (max-width: 991px) {
       .news_block .date {
         margin-bottom: 20px; } }
