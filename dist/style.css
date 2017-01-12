@@ -1529,6 +1529,10 @@ body {
         .pagination ul a,
         .pagination ul span {
           font-size: 12px; } }
+    @media (max-width: 767px) {
+      .pagination ul .fake {
+        height: 1px;
+        width: 100%; } }
   .pagination i {
     position: relative;
     line-height: 1px;

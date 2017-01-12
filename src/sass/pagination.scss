@@ -1,105 +1,111 @@
 .pagination{
-	margin-top: 45px;
-	// margin-bottom: 30px;
+  margin-top: 45px;
+  // margin-bottom: 30px;
 
-	@extend .clearfix;
+  @extend .clearfix;
 
-	.prev{
-		float: left;
-	}
-	.next{
-		float: right;
-	}	
-	ul{
-		margin: 0 auto;
-		text-align: center;
-		
-		li{
-			display: inline-block;	
-			vertical-align: middle;
-			position: relative;
-			height: 30px;
-			line-height: 30px;
-			margin: 0 8px;
+  .prev{
+    float: left;
+  }
+  .next{
+    float: right;
+  } 
+  ul{
+    margin: 0 auto;
+    text-align: center;
+    
+    li{
+      display: inline-block;  
+      vertical-align: middle;
+      position: relative;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 8px;
 
-			&.prev,
-			&.next{
-				*{ color: $black; }
-				span{
-					font-size: 16px;
+      &.prev,
+      &.next{
+        *{ color: $black; }
+        span{
+          font-size: 16px;
 
-					@media(max-width: $grid_tablet){
-						font-size: 13px;
-					}
-				}
+          @media(max-width: $grid_tablet){
+            font-size: 13px;
+          }
+        }
 
-				&.not_active *{
-					color: #918f8f !important;
-					cursor: default;
-				}
-				
-				a, span{
+        &.not_active *{
+          color: #918f8f !important;
+          cursor: default;
+        }
+        
+        a, span{
 
-					&:before,
-					&:after{
-						display: none;
-					}
-				}
-				
-			}
+          &:before,
+          &:after{
+            display: none;
+          }
+        }
+        
+      }
 
-			&:first-child{
-				margin-left: 0;
-			}
-			&:last-child{
-				margin-right: 0;
-			}
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
 
-			&.active *{
-				font-size: 30px;
-				color: $green;
+      &.active *{
+        font-size: 30px;
+        color: $green;
 
-				@media(max-width: $grid_tablet){
-					font-size: 20px;
-				}
-			}
+        @media(max-width: $grid_tablet){
+          font-size: 20px;
+        }
+      }
 
-		}
+    }
 
-		a,
-		span{
-			font:{
-				size: 14px;
-				weight: 900;
-			}
-			line-height: 30px;
-			color: #918f8f;
-			position: relative;
+    a,
+    span{
+      font:{
+        size: 14px;
+        weight: 900;
+      }
+      line-height: 30px;
+      color: #918f8f;
+      position: relative;
 
-			@include transition(color .25s);
+      @include transition(color .25s);
 
-			&:hover,
-			&:hover *{
-				color: $green;
-			}
+      &:hover,
+      &:hover *{
+        color: $green;
+      }
 
-			&:before{
-				content: '0';
-			}
-			&:after{
-				content: '.';
-			}
+      &:before{
+        content: '0';
+      }
+      &:after{
+        content: '.';
+      }
 
-			@media(max-width: $grid_mobile){
-				font-size: 12px;
-			}
-		}
+      @media(max-width: $grid_mobile){
+        font-size: 12px;
+      }
+    }
+  
+  @media(max-width: $grid_mobile){
+    .fake{
+      height: 1px;
+      width: 100%;
+    }
+  }
 
+  }
 
-	}
-
-	i{
-		position: relative;
+  i{
+    position: relative;
     line-height: 1px;
     font-size: 30px;
     display: inline-block;
@@ -108,14 +114,14 @@
     @include transition(color .25s);
 
     &.icon-slide-arrow-left{
-    	left: -7px;
+      left: -7px;
     }
     &.icon-slide-arrow-right{
-    	right: -7px;
+      right: -7px;
     }
 
     @media(max-width: $grid_tablet){
-    	top: 9px;
+      top: 9px;
     }
-	}
+  }
 }
