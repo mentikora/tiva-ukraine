@@ -1,4 +1,9 @@
 .filter{
+  &.not-active {
+    ul:last-child {
+			margin-bottom: 30px;
+    }
+  }
 	ul{
 		box-shadow: 0 0 6px 0 #d2d2d2;
 		margin-top: 30px;
