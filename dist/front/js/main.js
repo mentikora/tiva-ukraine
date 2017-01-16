@@ -18,6 +18,21 @@ $(document).ready(function(){
   $('#nav span').on('click', function(e){
     e.stopPropagation();
     $(this).toggleClass('active').siblings('ul').slideToggle(200).toggleClass('active');
+
+    // if ( $(this).hasClass('active') ){
+    //   $(this).removeClass('active');
+    //   $(this).siblings('ul').slideUp(200).removeClass('active');
+    // } else {
+    //   $(this).addClass('active');
+    //   $(this).siblings('ul').slideDown(200).addClass('active');
+    // }
+  });
+
+  $('#nav > li > span').on('click', function(){
+    if( !$(this).hasClass('active') ){
+      $(this).siblings().find('ul').slideUp();
+      $(this).siblings().find('.active').removeClass('active');
+    }
   });
 
   //show top => theme-def
