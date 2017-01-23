@@ -1,12 +1,12 @@
 'use strict';
 
 $(document).ready(function(){
-  
+
   //show nav => theme-def
   $('.mobile_menu_btn').on('click', function(){
     $(this).toggleClass('active');
     $('#nav').slideToggle(200);
-    if ($('#nav').is('.active')){ 
+    if ($('#nav').is('.active')){
       $('#nav ul.active').slideUp();
       $('#nav, #nav .active').removeClass('active');
     } else{
@@ -17,23 +17,41 @@ $(document).ready(function(){
   //add active to domtree => theme-def
   $('#nav span').on('click', function(e){
     e.stopPropagation();
-    $(this).toggleClass('active').siblings('ul').slideToggle(200).toggleClass('active');
 
-    // if ( $(this).hasClass('active') ){
-    //   $(this).removeClass('active');
-    //   $(this).siblings('ul').slideUp(200).removeClass('active');
-    // } else {
-    //   $(this).addClass('active');
-    //   $(this).siblings('ul').slideDown(200).addClass('active');
-    // }
-  });
+    var toggleCurrent = function() {
+      var ul = $(this).toggleClass('active').siblings('ul');
 
-  $('#nav > li > span').on('click', function(){
-    if( !$(this).hasClass('active') ){
-      $(this).siblings().find('ul').slideUp();
-      $(this).siblings().find('.active').removeClass('active');
+      ul.children('li:has(span.active)').children('span.active').each(function() {
+        // recursion
+        toggleCurrent.apply(this);
+      });
+
+      ul.slideToggle(200)
+      .toggleClass('active')
+      .toggleClass('open');
+    };
+    ;
+
+    var activeRoot = $(this).parent().siblings('li').find('span.active');
+    if (activeRoot.length) {
+      activeRoot.toggleClass('active')
+        .parent()
+        .find('ul.open')
+          .slideUp(50, toggleCurrent.bind(this))
+          .toggleClass('active')
+          .toggleClass('open');
+    } else {
+      toggleCurrent.apply(this);
     }
+
   });
+
+  //$('#nav > li > span').on('click', function(){
+  //  if( !$(this).hasClass('active') ){
+  //    $(this).siblings().find('ul').slideUp();
+  //    $(this).siblings().find('.active').removeClass('active');
+  //  }
+  //});
 
   //show top => theme-def
   $('#header_top_mobile_button').on('click', function(){
