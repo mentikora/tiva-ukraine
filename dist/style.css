@@ -3062,6 +3062,9 @@ section.more .btn {
 
 .contacts_page {
   padding-bottom: 75px; }
+  @media (max-width: 767px) {
+    .contacts_page {
+      padding-bottom: 25px; } }
   .contacts_page h1 {
     margin-bottom: 15px; }
   .contacts_page .info {
@@ -3086,6 +3089,7 @@ section.more .btn {
   background: #eeeeee; }
   @media (max-width: 767px) {
     .departments {
+      padding-top: 50px;
       padding-bottom: 50px; } }
   .departments h2 {
     color: #323232; }
