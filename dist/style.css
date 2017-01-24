@@ -2351,7 +2351,7 @@ section.more .btn {
 
 /* mainpage advantages */
 .mainpage_advantages {
-  background: #fbfbfb; }
+  background: #eeeeee; }
   .mainpage_advantages img {
     max-width: 70%;
     margin: 45px auto 0;
@@ -3060,30 +3060,30 @@ section.more .btn {
     .news_item_page .ck_editor {
       font-size: 12px; } }
 
-.contacts_page h1 {
-  margin-bottom: 15px; }
-
-.contacts_page .info {
-  text-align: center;
-  text-transform: uppercase; }
-  .contacts_page .info .ck_editor {
-    color: #898989;
-    margin-bottom: 25px; }
-
-.contacts_page .icon-location-large,
-.contacts_page .icon-phone-large,
-.contacts_page .icon-mail-large {
-  font-size: 115px;
-  color: #8fc73e; }
+.contacts_page {
+  padding-bottom: 75px; }
+  .contacts_page h1 {
+    margin-bottom: 15px; }
+  .contacts_page .info {
+    text-align: center;
+    text-transform: uppercase; }
+    .contacts_page .info .ck_editor {
+      color: #898989;
+      margin-bottom: 25px; }
+  .contacts_page .icon-location-large,
+  .contacts_page .icon-phone-large,
+  .contacts_page .icon-mail-large {
+    font-size: 115px;
+    color: #8fc73e; }
 
 /* 
 	Departments
 	===========
 */
 .departments {
-  padding-top: 65px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  background: #fbfbfb; }
+  background: #eeeeee; }
   @media (max-width: 767px) {
     .departments {
       padding-bottom: 50px; } }
