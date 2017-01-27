@@ -26,11 +26,16 @@ $(document).ready(function(){
         toggleCurrent.apply(this);
       });
 
+      if (window.matchMedia('(max-width: 1300px)').matches) {
+        if (ul.parents('ul.open').length) {
+          ul.css('left', '-' + (ul.width() - 2) + 'px');
+        }
+      }
+
       ul.slideToggle(200)
       .toggleClass('active')
       .toggleClass('open');
     };
-    ;
 
     var activeRoot = $(this).parent().siblings('li').find('span.active');
     if (activeRoot.length) {
