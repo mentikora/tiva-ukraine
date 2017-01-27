@@ -28,7 +28,7 @@ $(document).ready(function(){
 
       if (window.matchMedia('(max-width: 1300px)').matches) {
         if (ul.parents('ul.open').length) {
-          ul.css('left', '-' + (ul.width() - 2) + 'px');
+          ul.css('left', '-' + (ul.width() - 4) + 'px');
         }
       }
 
