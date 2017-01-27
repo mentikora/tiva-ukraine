@@ -26,7 +26,7 @@ $(document).ready(function(){
         toggleCurrent.apply(this);
       });
 
-      if (window.matchMedia('(max-width: 1300px)').matches) {
+      if (window.matchMedia('(max-width: 1800px)').matches) {
         if (ul.parents('ul.open').length) {
           ul.css('left', '-' + (ul.width() + 2) + 'px');
         }
