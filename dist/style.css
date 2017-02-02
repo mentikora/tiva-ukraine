@@ -1875,12 +1875,14 @@ body {
     color: #fff;
     -webkit-transition: color 0.25s;
     transition: color 0.25s; }
-    #footer ul a:hover, #footer ul a.current {
+    #footer ul a:hover {
       color: #8fc73e; }
   #footer ul li {
     margin-bottom: 37px; }
     #footer ul li:last-child {
       margin-bottom: 0; }
+    #footer ul li.current a {
+      color: #8fc73e; }
     @media (max-width: 767px) {
       #footer ul li {
         float: left;

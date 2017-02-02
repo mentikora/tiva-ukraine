@@ -24,8 +24,7 @@
     a{ 
       color: #fff; 
       @include transition(color .25s);
-      &:hover,
-      &.current {
+      &:hover {
         color: $green;
       }
     }
@@ -33,6 +32,11 @@
       margin-bottom: 37px;
       &:last-child{
         margin-bottom: 0;
+      }
+      &.current {
+        a {
+          color: $green;
+        }
       }
       
       @media(max-width: $grid_mobile){
