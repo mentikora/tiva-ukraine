@@ -24,7 +24,8 @@
     a{ 
       color: #fff; 
       @include transition(color .25s);
-      &:hover{
+      &:hover,
+      &.current {
         color: $green;
       }
     }

@@ -1875,7 +1875,7 @@ body {
     color: #fff;
     -webkit-transition: color 0.25s;
     transition: color 0.25s; }
-    #footer ul a:hover {
+    #footer ul a:hover, #footer ul a.current {
       color: #8fc73e; }
   #footer ul li {
     margin-bottom: 37px; }
