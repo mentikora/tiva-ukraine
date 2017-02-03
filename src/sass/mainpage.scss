@@ -197,6 +197,12 @@
     justify-content: center;
   }
 
+  /*ie fx*/
+  h2,
+  .ck_editor{
+    width: 100%;
+  }
+
   .title_slider{
     &:before{
       content: '';
@@ -340,6 +346,9 @@ section.more{
     line-height: 24px;
     color: #ffffff;
     margin-bottom: 40px;
+
+    /*ie fx*/
+    width: 100%;
 
     @media(max-width: $grid_tablet){
       margin-bottom: 20px;
@@ -542,6 +551,15 @@ section.more{
 
   .content{
     padding: 40px 15px 10px 0;
+
+    @media (min-width: $grid_tablet) and (max-width: 1200px){
+      padding: 25px 15px 10px 0;
+
+      .ck_editor{
+        max-height: 52px;
+        overflow: hidden;
+      }
+    }
 
     @media(max-width: $grid_tablet){
       padding: 30px 30px 10px 0;
